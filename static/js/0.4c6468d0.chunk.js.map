@@ -1,0 +1,1 @@
+{"version":3,"sources":["writeups/test/test.jsx"],"names":["Component"],"mappings":"4GAAA,uBAMeA,UAJf,WACI,OAAO","file":"static/js/0.4c6468d0.chunk.js","sourcesContent":["import React from \"react\";\n\nfunction Component() {    \n    return <div>Hi!</div>\n}\n\nexport default Component;\n"],"sourceRoot":""}

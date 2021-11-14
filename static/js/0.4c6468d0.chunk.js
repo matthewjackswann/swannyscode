@@ -1,0 +1,2 @@
+(this.webpackJsonpswannyscode=this.webpackJsonpswannyscode||[]).push([[0],{150:function(n,s,c){"use strict";c.r(s);c(1);var e=c(0);s.default=function(){return Object(e.jsx)("div",{children:"Hi!"})}}}]);
+//# sourceMappingURL=0.4c6468d0.chunk.js.map
