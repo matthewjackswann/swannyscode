@@ -1,0 +1,2 @@
+(this.webpackJsonpswannyscode=this.webpackJsonpswannyscode||[]).push([[10],{414:function(s,n,e){"use strict";e.r(n),n.default=e.p+"static/media/insaneBolt2.e263db8e.png"}}]);
+//# sourceMappingURL=10.60ef73b4.chunk.js.map
