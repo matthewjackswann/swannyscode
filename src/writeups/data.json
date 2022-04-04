@@ -1,0 +1,32 @@
+{
+    "list": ["3","2","1"],
+    "categories": ["Crypto","Misc","OSINT","Pwn","Reversing","Scripting","Stego","Web","Forensics"],
+    "events": ["HTB Uni 2021"],
+    "1": {
+        "key": "1",
+        "title": "Space Pirates",
+        "folder": "HTB",
+        "page": "spacePirates",
+        "date": "November 21, 2021",
+        "categories": ["Crypto"],
+        "event": "HTB Uni 2021"
+    },
+    "2": {
+        "key": "2",
+        "title": "Insane Bolt",
+        "folder": "HTB",
+        "page": "insaneBolt",
+        "date": "November 21, 2021",
+        "categories": ["Misc","Scripting"],
+        "event": "HTB Uni 2021"
+    },
+    "3": {
+        "key": "3",
+        "title": "AES CBC with predictable IV",
+        "folder": "misc",
+        "page": "aescbcpiv",
+        "date": "December 5, 2021",
+        "categories": ["Crypto"],
+        "event": "n/a"
+    }
+}

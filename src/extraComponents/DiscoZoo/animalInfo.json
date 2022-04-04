@@ -1,0 +1,892 @@
+{
+    "animals": {
+        "Empty": {
+            "width": 1,
+            "height": 1,
+            "rarity": 0,
+            "points": [{"x": 0, "y": 0}]
+        },
+        "Pig": {
+            "width": 2,
+            "height": 2,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 1, "y": 1}
+            ]
+        },
+        "Sheep": {
+            "width": 4,
+            "height": 1,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 0},
+                {"x": 2, "y": 0},
+                {"x": 3, "y": 0}
+            ]
+        },
+        "Rabbit": {
+            "width": 1,
+            "height": 4,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 0, "y": 2},
+                {"x": 0, "y": 3}
+            ]
+        },
+        "Cow": {
+            "width": 3,
+            "height": 1,
+            "rarity": 3,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 0},
+                {"x": 2, "y": 0}
+            ]
+        },
+        "Horse": {
+            "width": 1,
+            "height": 3,
+            "rarity": 3,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 0, "y": 2}
+            ]
+        },
+        "Unicorn": {
+            "width": 3,
+            "height": 2,
+            "rarity": 10,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 1},
+                {"x": 2, "y": 1}
+            ]
+        },
+        "Chicken": {
+            "width": 3,
+            "height": 3,
+            "rarity": 20,
+            "points": [
+                {"x": 0, "y": 2},
+                {"x": 1, "y": 1},
+                {"x": 2, "y": 0}
+            ]
+        },
+        "Kangaroo": {
+            "width": 4,
+            "height": 4,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 1},
+                {"x": 2, "y": 2},
+                {"x": 3, "y": 3}
+            ]
+        },
+        "Platypus": {
+            "width": 3,
+            "height": 2,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 0},
+                {"x": 1, "y": 1},
+                {"x": 2, "y": 1}
+            ]
+        },
+        "Crocodile": {
+            "width": 4,
+            "height": 1,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 0},
+                {"x": 2, "y": 0},
+                {"x": 3, "y": 0}
+            ]
+        },
+        "Koala": {
+            "width": 2,
+            "height": 2,
+            "rarity": 3,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 0},
+                {"x": 1, "y": 1}
+            ]
+        },
+        "Cockatoo": {
+            "width": 2,
+            "height": 3,
+            "rarity": 3,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 1},
+                {"x": 1, "y": 2}
+            ]
+        },
+        "Tiddalik": {
+            "width": 3,
+            "height": 2,
+            "rarity": 10,
+            "points": [
+                {"x": 0, "y": 1},
+                {"x": 1, "y": 0},
+                {"x": 2, "y": 1}
+            ]
+        },
+        "Echidna": {
+            "width": 3,
+            "height": 2,
+            "rarity": 20,
+            "points": [
+                {"x": 0, "y": 1},
+                {"x": 1, "y": 1},
+                {"x": 2, "y": 0}
+            ]
+        },
+        "Zebra": {
+            "width": 3,
+            "height": 3,
+            "rarity": 1,
+            "points": [
+                {"x": 1, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 2, "y": 1},
+                {"x": 1, "y": 2}
+            ]
+        },
+        "Hippo": {
+            "width": 3,
+            "height": 3,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 0, "y": 2},
+                {"x": 2, "y": 0},
+                {"x": 2, "y": 2}
+            ]
+        },
+        "Giraffe": {
+            "width": 1,
+            "height": 4,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 0, "y": 2},
+                {"x": 0, "y": 3}
+            ]
+        },
+        "Lion": {
+            "width": 3,
+            "height": 1,
+            "rarity": 3,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 0},
+                {"x": 2, "y": 0}
+            ]
+        },
+        "Elephant": {
+            "width": 2,
+            "height": 2,
+            "rarity": 3,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 0},
+                {"x": 0, "y": 1}
+            ]
+        },
+        "Gryphon": {
+            "width": 3,
+            "height": 2,
+            "rarity": 10,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 1},
+                {"x": 2, "y": 0}
+            ]
+        },
+        "Rhinoceros": {
+            "width": 2,
+            "height": 3,
+            "rarity": 20,
+            "points": [
+                {"x": 1, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 1, "y": 2}
+            ]
+        },
+        "Bear": {
+            "width": 2,
+            "height": 4,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 0},
+                {"x": 1, "y": 1},
+                {"x": 1, "y": 2}
+            ]
+        },
+        "Skunk": {
+            "width": 3,
+            "height": 2,
+            "rarity": 1,
+            "points": [
+                {"x": 1, "y": 0},
+                {"x": 2, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 1, "y": 1}
+            ]
+        },
+        "Beaver": {
+            "width": 3,
+            "height": 3,
+            "rarity": 1,
+            "points": [
+                {"x": 2, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 1, "y": 1},
+                {"x": 2, "y": 2}
+            ]
+        },
+        "Moose": {
+            "width": 3,
+            "height": 2,
+            "rarity": 3,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 1},
+                {"x": 2, "y": 0}
+            ]
+        },
+        "Fox": {
+            "width": 3,
+            "height": 2,
+            "rarity": 3,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 0},
+                {"x": 2, "y": 1}
+            ]
+        },
+        "Sasquatch": {
+            "width": 1,
+            "height": 2,
+            "rarity": 10,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 0, "y": 1}
+            ]
+        },
+        "Otter": {
+            "width": 2,
+            "height": 2,
+            "rarity": 20,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 1, "y": 1}
+            ]
+        },
+        "Penguin": {
+            "width": 3,
+            "height": 3,
+            "rarity": 1,
+            "points": [
+                {"x": 1, "y": 0},
+                {"x": 1, "y": 1},
+                {"x": 0, "y": 2},
+                {"x": 2, "y": 2}
+            ]
+        },
+        "Seal": {
+            "width": 4,
+            "height": 3,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 1},
+                {"x": 2, "y": 2},
+                {"x": 3, "y": 1}
+            ]
+        },
+        "Muskox": {
+            "width": 3,
+            "height": 2,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 1, "y": 0},
+                {"x": 2, "y": 1}
+            ]
+        },
+        "Polar_Bear": {
+            "width": 3,
+            "height": 2,
+            "rarity": 3,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 2, "y": 1},
+                {"x": 2, "y": 0}
+            ]
+        },
+        "Walrus": {
+            "width": 3,
+            "height": 2,
+            "rarity": 3,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 1},
+                {"x": 2, "y": 1}
+            ]
+        },
+        "Yeti": {
+            "width": 1,
+            "height": 3,
+            "rarity": 10,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 0, "y": 2}
+            ]
+        },
+        "Snowy_Owl": {
+            "width": 2,
+            "height": 2,
+            "rarity": 20,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 0},
+                {"x": 1, "y": 1}
+            ]
+        },
+        "Monkey": {
+            "width": 4,
+            "height": 2,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 1},
+                {"x": 2, "y": 0},
+                {"x": 3, "y": 1}
+            ]
+        },
+        "Toucan": {
+            "width": 2,
+            "height": 4,
+            "rarity": 1,
+            "points": [
+                {"x": 1, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 1, "y": 2},
+                {"x": 1, "y": 3}
+            ]
+        },
+        "Gorilla": {
+            "width": 3,
+            "height": 2,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 2, "y": 0},
+                {"x": 2, "y": 1}
+            ]
+        },
+        "Panda": {
+            "width": 3,
+            "height": 3,
+            "rarity": 3,
+            "points": [
+                {"x": 2, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 2, "y": 2}
+            ]
+        },
+        "Tiger": {
+            "width": 4,
+            "height": 1,
+            "rarity": 3,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 2, "y": 0},
+                {"x": 3, "y": 0}
+            ]
+        },
+        "Phoenix": {
+            "width": 3,
+            "height": 3,
+            "rarity": 10,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 2, "y": 2}
+            ]
+        },
+        "Lemur": {
+            "width": 2,
+            "height": 3,
+            "rarity": 20,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 1},
+                {"x": 0, "y": 2}
+            ]
+        },
+        "Diplodocus": {
+            "width": 3,
+            "height": 3,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 1},
+                {"x": 1, "y": 2},
+                {"x": 2, "y": 1}
+            ]
+        },
+        "Stegosaurus": {
+            "width": 4,
+            "height": 2,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 1},
+                {"x": 1, "y": 0},
+                {"x": 2, "y": 0},
+                {"x": 3, "y": 1}
+            ]
+        },
+        "Raptor": {
+            "width": 3,
+            "height": 3,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 0},
+                {"x": 1, "y": 1},
+                {"x": 2, "y": 2}
+            ]
+        },
+        "T_Rex": {
+            "width": 2,
+            "height": 3,
+            "rarity": 3,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 0, "y": 2},
+                {"x": 1, "y": 2}
+            ]
+        },
+        "Triceratops": {
+            "width": 3,
+            "height": 3,
+            "rarity": 3,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 2, "y": 1},
+                {"x": 0, "y": 2}
+            ]
+        },
+        "Dragon": {
+            "width": 3,
+            "height": 2,
+            "rarity": 10,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 2, "y": 1}
+            ]
+        },
+        "Ankylosaurus": {
+            "width": 3,
+            "height": 2,
+            "rarity": 20,
+            "points": [
+                {"x": 0, "y": 1},
+                {"x": 2, "y": 0},
+                {"x": 2, "y": 1}
+            ]
+        },
+        "Wooly_Rhino": {
+            "width": 4,
+            "height": 3,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 1},
+                {"x": 1, "y": 2},
+                {"x": 2, "y": 0},
+                {"x": 3, "y": 1}
+            ]
+        },
+        "Giant_Sloth": {
+            "width": 3,
+            "height": 3,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 2, "y": 1},
+                {"x": 0, "y": 2},
+                {"x": 2, "y": 2}
+            ]
+        },
+        "Dire_Wolf": {
+            "width": 4,
+            "height": 3,
+            "rarity": 1,
+            "points": [
+                {"x": 1, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 3, "y": 1},
+                {"x": 1, "y": 2}
+            ]
+        },
+        "Saber_Tooth": {
+            "width": 3,
+            "height": 3,
+            "rarity": 3,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 2, "y": 1},
+                {"x": 1, "y": 2}
+            ]
+        },
+        "Mammoth": {
+            "width": 3,
+            "height": 3,
+            "rarity": 3,
+            "points": [
+                {"x": 0, "y": 1},
+                {"x": 1, "y": 0},
+                {"x": 2, "y": 2}
+            ]
+        },
+        "Akhlut": {
+            "width": 3,
+            "height": 3,
+            "rarity": 10,
+            "points": [
+                {"x": 2, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 2, "y": 2}
+            ]
+        },
+        "Yukon_Camel": {
+            "width": 4,
+            "height": 3,
+            "rarity": 20,
+            "points": [
+                {"x": 2, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 3, "y": 2}
+            ]
+        },
+        "Raccoon": {
+            "width": 4,
+            "height": 2,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 2, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 3, "y": 1}
+            ]
+        },
+        "Pigeon": {
+            "width": 3,
+            "height": 3,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 1},
+                {"x": 1, "y": 2},
+                {"x": 2, "y": 2}
+            ]
+        },
+        "Rat": {
+            "width": 4,
+            "height": 2,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 0},
+                {"x": 1, "y": 1},
+                {"x": 3, "y": 1}
+            ]
+        },
+        "Squirrel": {
+            "width": 3,
+            "height": 3,
+            "rarity": 3,
+            "points": [
+                {"x": 2, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 1, "y": 2}
+            ]
+        },
+        "Opossum": {
+            "width": 3,
+            "height": 2,
+            "rarity": 3,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 2, "y": 1}
+            ]
+        },
+        "Sewer_Turtle": {
+            "width": 2,
+            "height": 1,
+            "rarity": 10,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 0}
+            ]
+        },
+        "Chipmunk": {
+            "width": 4,
+            "height": 2,
+            "rarity": 20,
+            "points": [
+                {"x": 0, "y": 1},
+                {"x": 1, "y": 0},
+                {"x": 3, "y": 1}
+            ]
+        },
+        "Goat": {
+            "width": 3,
+            "height": 2,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 1, "y": 1},
+                {"x": 2, "y": 1}
+            ]
+        },
+        "Cougar": {
+            "width": 3,
+            "height": 3,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 1},
+                {"x": 2, "y": 2},
+                {"x": 0, "y": 2}
+            ]
+        },
+        "Elk": {
+            "width": 3,
+            "height": 2,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 2, "y": 0},
+                {"x": 1, "y": 1},
+                {"x": 2, "y": 1}
+            ]
+        },
+        "Eagle": {
+            "width": 2,
+            "height": 3,
+            "rarity": 3,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 1, "y": 2}
+            ]
+        },
+        "Coyote": {
+            "width": 3,
+            "height": 2,
+            "rarity": 3,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 0},
+                {"x": 2, "y": 1}
+            ]
+        },
+        "Aatxe": {
+            "width": 3,
+            "height": 2,
+            "rarity": 10,
+            "points": [
+                {"x": 0, "y": 1},
+                {"x": 2, "y": 0}
+            ]
+        },
+        "Pika": {
+            "width": 3,
+            "height": 2,
+            "rarity": 20,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 2, "y": 0},
+                {"x": 2, "y": 1}
+            ]
+        },
+        "Moonkey": {
+            "width": 3,
+            "height": 3,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 2, "y": 1},
+                {"x": 2, "y": 2}
+            ]
+        },
+        "Lunar_Tick": {
+            "width": 3,
+            "height": 4,
+            "rarity": 1,
+            "points": [
+                {"x": 1, "y": 0},
+                {"x": 1, "y": 2},
+                {"x": 0, "y": 3},
+                {"x": 2, "y": 3}
+            ]
+        },
+        "Tribble": {
+            "width": 3,
+            "height": 2,
+            "rarity": 1,
+            "points": [
+                {"x": 1, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 1, "y": 1},
+                {"x": 2, "y": 1}
+            ]
+        },
+        "Moonicorn": {
+            "width": 2,
+            "height": 2,
+            "rarity": 3,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 1, "y": 1}
+            ]
+        },
+        "Luna_Moth": {
+            "width": 3,
+            "height": 3,
+            "rarity": 3,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 2, "y": 0},
+                {"x": 1, "y": 2}
+            ]
+        },
+        "Jade_Rabbit": {
+            "width": 2,
+            "height": 3,
+            "rarity": 10,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 2}
+            ]
+        },
+        "Babmoon": {
+            "width": 3,
+            "height": 3,
+            "rarity": 20,
+            "points": [
+                {"x": 1, "y": 0},
+                {"x": 2, "y": 1},
+                {"x": 0, "y": 2}
+            ]
+        },
+        "Marsmot": {
+            "width": 2,
+            "height": 3,
+            "rarity": 1,
+            "points": [
+                {"x": 1, "y": 0},
+                {"x": 1, "y": 1},
+                {"x": 0, "y": 2},
+                {"x": 1, "y": 2}
+            ]
+        },
+        "Marsmoset": {
+            "width": 3,
+            "height": 3,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 2, "y": 0},
+                {"x": 2, "y": 1},
+                {"x": 1, "y": 2}
+            ]
+        },
+        "Rock": {
+            "width": 2,
+            "height": 2,
+            "rarity": 1,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 0},
+                {"x": 0, "y": 1},
+                {"x": 1, "y": 1}
+            ]
+        },
+        "Rover": {
+            "width": 3,
+            "height": 2,
+            "rarity": 3,
+            "points": [
+                {"x": 0, "y": 1},
+                {"x": 1, "y": 0},
+                {"x": 2, "y": 1}
+            ]
+        },
+        "Martian": {
+            "width": 3,
+            "height": 2,
+            "rarity": 3,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 1, "y": 1},
+                {"x": 2, "y": 0}
+            ]
+        },
+        "Marsmallow": {
+            "width": 1,
+            "height": 3,
+            "rarity": 10,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 0, "y": 2}
+            ]
+        },
+        "Marsten": {
+            "width": 4,
+            "height": 2,
+            "rarity": 20,
+            "points": [
+                {"x": 0, "y": 0},
+                {"x": 2, "y": 0},
+                {"x": 3, "y": 1}
+            ]
+        }
+    },
+    "area": {
+        "Farm": ["Cow","Pig","Sheep","Rabbit","Horse","Unicorn","Chicken"],
+        "Outback": ["Kangaroo","Platypus","Crocodile","Koala","Cockatoo","Tiddalik","Echidna"],
+        "Savanna": ["Zebra","Hippo","Giraffe","Lion","Elephant","Gryphon","Rhinoceros"],
+        "Northern": ["Bear","Skunk","Beaver","Moose","Fox","Sasquatch","Otter"],
+        "Polar": ["Penguin","Seal","Muskox","Polar_Bear","Walrus","Yeti","Snowy_Owl"],
+        "Jungle": ["Monkey","Toucan","Gorilla","Panda","Tiger","Phoenix","Lemur"],
+        "Jurassic": ["Diplodocus","Stegosaurus","Raptor","T_Rex","Triceratops","Dragon","Ankylosaurus"],
+        "Ice Age": ["Wooly_Rhino","Giant_Sloth","Dire_Wolf","Saber_Tooth","Mammoth","Akhlut","Yukon_Camel"],
+        "City": ["Raccoon","Pigeon","Rat","Squirrel","Opossum","Sewer_Turtle","Chipmunk"],
+        "Mountain": ["Goat","Cougar","Elk","Eagle","Coyote","Aatxe","Pika"],
+        "Moon": ["Moonkey","Lunar_Tick","Tribble","Moonicorn","Luna_Moth","Jade_Rabbit","Babmoon"],
+        "Mars": ["Marsmot","Marsmoset","Rock","Rover","Martian","Marsmallow","Marsten"]
+    }
+}
