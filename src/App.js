@@ -9,6 +9,9 @@ import CTF from './CTF';
 import WriteUp from './WriteUp';
 import { Link } from 'react-router-dom';
 import DiscoZoo from './extraComponents/DiscoZoo/DiscoZoo';
+import PlaydleRoot from './extraComponents/Playdle/PlaydleRoot';
+import PlaydleRedirect from './extraComponents/Playdle/PlaydleRedirect';
+import PlaydleWIP from "./extraComponents/Playdle/PlaydleWIP";
 
 function App() {
   return (
@@ -37,6 +40,13 @@ function App() {
             </Route>
             <Route path="/ctf/:id">
               <WriteUp />
+            </Route>
+            <Route exact path = "/playdle">
+              <PlaydleWIP />
+              <PlaydleRoot />
+            </Route>
+            <Route exact path = "/playdler">
+              <PlaydleRedirect />
             </Route>
             <Route path="*">
               <NotFound>
