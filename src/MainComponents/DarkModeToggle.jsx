@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 
-function DarkModeToggle() {
+function DarkModeToggle({className}) {
 
     let [inDarkMode, setDarkMode] = useState(localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches));
 
@@ -15,8 +15,8 @@ function DarkModeToggle() {
     }, [inDarkMode]);
 
     return (
-        <div>
-            <button onClick={() => setDarkMode(prev => !prev)}><FontAwesomeIcon icon={faMoon} size="xl" style={{color: inDarkMode ? "#F6F2FF" : "#1E3050"}}/></button>
+        <div className={className}>
+            <button onClick={() => setDarkMode(prev => {localStorage.theme = !prev ? 'dark' : ''; return !prev;})}><FontAwesomeIcon icon={faMoon} size="xl" style={{color: inDarkMode ? "#F6F2FF" : "#1E3050"}}/></button>
         </div>
     );
 }
