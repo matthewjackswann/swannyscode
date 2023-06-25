@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
 import React, { Suspense } from "react";
-import UpdatesInfo from "./data.json";
+import ProjectsInfo from "./data.json";
 import PageNotFound from "../Pages/PageNotFound";
 
 const getContent = (path) => {
-    const Component = React.lazy(() => import(`${path}`));
+    const Component = React.lazy(() => import(`./${path}`));
     return (
         <div key={path}>
             <Suspense fallback={<div>Loading...</div>}>
@@ -14,14 +14,14 @@ const getContent = (path) => {
     );
 }
 
-function UpdateContent() {
+function ProjectContent() {
     const { id } = useParams();
 
-    if (!(id in UpdatesInfo && UpdatesInfo[id].extended && !UpdatesInfo[id].projectId)) return <PageNotFound />;
+    if (!(id in ProjectsInfo)) return <PageNotFound />;
 
     return (<div>
-        {getContent(`Content/${UpdatesInfo[id].fileName}`)}
+        {getContent(`${ProjectsInfo[id].folder}/Content`)}
     </div>);
 }
 
-export default UpdateContent;
+export default ProjectContent;

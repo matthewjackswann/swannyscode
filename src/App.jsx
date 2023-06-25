@@ -5,6 +5,7 @@ import PageNotFound from './Pages/PageNotFound';
 import Updates from './Pages/Updates';
 import UpdateContent from './Updates/UpdateContent';
 import Projects from './Pages/Projects';
+import ProjectContent from './Projects/ProjectContent';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
               <Route path="/updates" element={<Updates />} />
               <Route path="/updates/:id" element={<UpdateContent />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="/projects/:id" element={<ProjectContent />} />
               <Route path="*" element={<PageNotFound />} />
             </Routes>
           </div>
