@@ -12,3 +12,16 @@ body {
 body * {
   @apply transition-colors duration-200;
 }
+
+
+/* Used for segmented button, can't really be moved out easily */
+.segmented-button-container {
+  --highlight-width: auto;
+  --highlight-x-pos: 0;
+  --highlight-height: auto;
+  --highlight-y-pos: 0;
+}
+
+.segmented-button-ready::before {
+  transition: transform 0.3s ease, width 0.3s ease;
+}

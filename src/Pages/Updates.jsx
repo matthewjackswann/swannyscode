@@ -2,9 +2,6 @@ import UpdatesInfo from "../Updates/data.json";
 import React, { useState } from "react";
 import { Suspense } from "react";
 import { Link } from "react-router-dom";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import OutsideClickCallback from "../Components/OutsideClickCallback";
 
 const getContent = (path) => {
     const Component = React.lazy(() => import(`../Updates/${path}`));
@@ -24,13 +21,6 @@ const catagoryColours = {
     "Group Work": "#d876e3",
     "Extended": "#cbab0b"
 }
-
-const sortingOptions = [
-    ["Newest First", (a, b) => new Date(UpdatesInfo[b].date) - new Date(UpdatesInfo[a].date)], 
-    ["Oldest First", (a, b) => new Date(UpdatesInfo[a].date) - new Date(UpdatesInfo[b].date)], 
-    ["Alphabetical (A - Z)", (a, b) => (UpdatesInfo[a].title).localeCompare(UpdatesInfo[b].title)], 
-    ["Alphabetical (Z - A)", (a, b) => (UpdatesInfo[b].title).localeCompare(UpdatesInfo[a].title)]
-];
 
 const getCatagoryLabel = (catagory, filters) => {
     const pillStyle = filters.has(catagory) || filters.size === 0 ?
@@ -88,7 +78,13 @@ function Updates() {
     let [openUpdate, setOpenUpdate] = useState("");
     let [filters, setFilters] = useState(new Set());
     let [updateKeys, setUpdateKeys] = useState([...Object.keys(UpdatesInfo)].sort((a, b) => new Date(UpdatesInfo[b].date) - new Date(UpdatesInfo[a].date)));
-    let [sortOpen, setSortOpen] = useState(false);
+
+    const sortOptions = [
+        ["Newest First", () => setUpdateKeys(prev => [...prev].sort((a, b) => new Date(UpdatesInfo[b].date) - new Date(UpdatesInfo[a].date)))], 
+        ["Oldest First", () => setUpdateKeys(prev => [...prev].sort((a, b) => new Date(UpdatesInfo[a].date) - new Date(UpdatesInfo[b].date)))], 
+        ["Alphabetical (A - Z)", () => setUpdateKeys(prev => [...prev].sort((a, b) => (UpdatesInfo[a].title).localeCompare(UpdatesInfo[b].title)))], 
+        ["Alphabetical (Z - A)", () => setUpdateKeys(prev => [...prev].sort((a, b) => (UpdatesInfo[b].title).localeCompare(UpdatesInfo[a].title)))]
+    ];
 
     return (
         <div>
@@ -99,30 +95,14 @@ function Updates() {
                 all the random stuff I've worked on, and the people I worked with them on.
             </p>
             <br />
-            <p className="lg:inline-block lg:mr-4">Filters:</p>
+            <p className="lg:inline-block lg:mr-4 text-text dark:text-text-dark">Filters:</p>
             {Object.keys(catagoryColours).map(c => getFilterLabel(c, filters, setFilters))}
             <br />
 
-            <OutsideClickCallback onClickLeave={() => setSortOpen(false)} className="grid float-right">
-                <div className="rounded-full bg-accent inline-block px-2 float-right cursor-pointer justify-self-end" onClick={() => setSortOpen(true)}>
-                    <span className="text-secondary-button dark:text-secondary-button">
-                        Sort by <FontAwesomeIcon className="text-secondary-button dark:text-secondary-button" icon={faChevronDown} />
-                    </span>
-                </div>
-                {sortOpen && <div className="float-right mt-1">
-                    {sortingOptions.map(([label, comp]) => {
-                        return (<div className="
-                            text-secondary-button dark:text-secondary-button
-                            bg-primary-button dark:bg-primary-button-dark
-                            hover:text-text dark:hover:text-text-dark
-                            hover:bg-accent dark:hover:bg-accent-dark
-                            cursor-pointer
-                            first:rounded-t-md last:rounded-b-md p-2"
-                            onClick={() => {setUpdateKeys(prev => [...prev].sort(comp))}}
-                            key={label}>{label}</div>);
-                    })}
-                </div>}
-            </OutsideClickCallback>
+            <select className="px-2 bg-accent dark:bg-accent-dark text-secondary-button dark:text-secondary-button-dark rounded-xl float-right cursor-pointer" style={{"WebkitAppearance": "none"}}
+            onChange={(e) => sortOptions[e.target.value][1]()}>
+                {sortOptions.map(([label, _], i) => <option key={i} value={i}>{label}</option>)}
+            </select>
 
             <br />
             {

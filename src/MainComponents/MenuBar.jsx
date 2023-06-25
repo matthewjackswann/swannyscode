@@ -11,7 +11,11 @@ function MenuBar() {
                 </h1>
             </Link>
             <div className='lg:ml-auto sm:flex'>
-                {[["/", "Home"], ["/projects", "Projects"], ["/updates", "Updates"], ["/contact", "Contact"]].map(([link, title]) => {
+                {[
+                    ["/", "Home"],
+                    ["/projects", "Projects"],
+                    ["/updates", "Updates"]
+                ].map(([link, title]) => {
                     return <Link key={link} className='block text-2xl text-text dark:text-text-dark hover:text-accent dark:hover:text-accent-dark sm:inline sm:mr-5' to={link}>{title}</Link>
                 })}
                 <DarkModeToggle className='inline my-auto'/>

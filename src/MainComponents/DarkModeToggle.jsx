@@ -16,7 +16,9 @@ function DarkModeToggle({className}) {
 
     return (
         <div className={className}>
-            <button onClick={() => setDarkMode(prev => {localStorage.theme = !prev ? 'dark' : ''; return !prev;})}><FontAwesomeIcon icon={faMoon} size="xl" style={{color: inDarkMode ? "#F6F2FF" : "#1E3050"}}/></button>
+            <button onClick={() => setDarkMode(prev => {localStorage.theme = !prev ? 'dark' : ''; return !prev;})}>
+                <FontAwesomeIcon icon={faMoon} size="xl" className="text-text dark:text-text-dark hover:text-accent dark:hover:text-accent-dark" />
+            </button>
         </div>
     );
 }
