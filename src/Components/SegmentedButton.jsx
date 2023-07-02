@@ -70,7 +70,7 @@ const SegmentedButton = ({segments, callback, defaultIndex = 0, controlRef}) => 
                     />
                     <label htmlFor={item.label} className={`
                         cursor-pointer block font-bold p-3 transition-colors duration-500 whitespace-pre-wrap sm:whitespace-normal
-                        ${i === activeIndex ? "text-secondary-button dark:text-secondary-button-dark" : "text-text dark:text-text-dark"}
+                        ${i === activeIndex ? "text-secondary-button dark:text-secondary-button-dark cc" : "tc"}
                     `}>
                         {item.label}
                     </label>

@@ -1,9 +1,9 @@
 import UpdatesInfo from "../Updates/data.json";
 import React, { useState } from "react";
 import { Suspense } from "react";
-import { Link } from "react-router-dom";
+import { UpdateSummary } from "../Updates/UpdateSummary";
 
-const getContent = (path) => {
+export const getContent = (path) => {
     const Component = React.lazy(() => import(`../Updates/${path}`));
     return (
         <div key={path}>
@@ -22,7 +22,7 @@ const catagoryColours = {
     "Extended": "#cbab0b"
 }
 
-const getCatagoryLabel = (catagory, filters) => {
+export const getCatagoryLabel = (catagory, filters) => {
     const pillStyle = filters.has(catagory) || filters.size === 0 ?
         {"color": catagoryColours[catagory], "backgroundColor": catagoryColours[catagory] + "70"} :
         {"color": catagoryColours[catagory] + "80", "backgroundColor": catagoryColours[catagory] + "50"};
@@ -52,27 +52,6 @@ const getFilterLabel = (catagory, filters, setFilters) => {
     </div>);
 }
 
-// creates summary card of an update
-function UpdateSummary({id, updateDetails, openFunction, open, filters}) {
-    return (
-        <div onClick={() => {openFunction(id)}} className="border-2 border-accent dark:border-accent-dark hover:border-primary-button dark:hover:border-primary-button-dark rounded-lg my-2 p-2">
-            <h1 className="text-3xl text-text dark:text-text-dark lg:inline-block lg:mr-4">{updateDetails.title}</h1>
-            {updateDetails.catagories.map(c => getCatagoryLabel(c, filters))}
-            <p className="text-text dark:text-text-dark">{updateDetails.date}</p>
-            {open && getContent(`Summary/${updateDetails.fileName}`)}
-            {open && updateDetails.extended && 
-                <div className="flow-root" >
-                    <Link to={updateDetails.projectId ? "/projects/" + updateDetails.projectId : "/updates/" + id} 
-                    className="
-                    text-primary-button dark:text-primary-button-dark
-                    hover:text-text dark:hover:text-text-dark
-                    float-right">Read More</Link>
-                </div>
-            }
-        </div>
-    );
-}
-
 // displays page and list of UpdateSummaries
 function Updates() {
     let [openUpdate, setOpenUpdate] = useState("");
@@ -88,14 +67,14 @@ function Updates() {
 
     return (
         <div>
-            <h1 className="text-text dark:text-text-dark text-4xl pb-2">Updates</h1>
-            <p className="text-text dark:text-text-dark">
+            <h1 className="text-4xl pb-2">Updates</h1>
+            <p>
                 These are some updates about a few events and achivements I have made.
                 Not all of them a worth creating a writeup on but I want to save them somewhere so I can remember
                 all the random stuff I've worked on, and the people I worked with them on.
             </p>
             <br />
-            <p className="lg:inline-block lg:mr-4 text-text dark:text-text-dark">Filters:</p>
+            <p className="lg:inline-block lg:mr-4">Filters:</p>
             {Object.keys(catagoryColours).map(c => getFilterLabel(c, filters, setFilters))}
             <br />
 
@@ -119,4 +98,3 @@ function Updates() {
 }
 
 export default Updates;
-export { UpdateSummary };

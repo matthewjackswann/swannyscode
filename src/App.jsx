@@ -6,10 +6,29 @@ import Updates from './Pages/Updates';
 import UpdateContent from './Updates/UpdateContent';
 import Projects from './Pages/Projects';
 import ProjectContent from './Projects/ProjectContent';
+import { useEffect } from 'react';
 
 function App() {
+
+  // for scross to page using # at end of url
+  useEffect(() => {
+    let path = window.location.href.split('#');
+    if (path.length > 1) {
+      const onPageLoad = () => {
+        let element = document.getElementById(path[1]);
+        if (element) element.scrollIntoView({ behavior: "smooth", block: "start" });
+      };
+      if (document.readyState === 'complete') {
+        onPageLoad();
+      } else {
+        window.addEventListener('load', onPageLoad);
+        return () => window.removeEventListener('load', onPageLoad);
+      }
+    }
+  }, []);
+
   return (
-    <div className='bg-background dark:bg-background-dark min-h-screen'>
+    <div className='bg-background dark:bg-background-dark min-h-screen text-text dark:text-text-dark transition-colors duration-200'>
       <div className='max-w-7xl items-center mx-auto'>
         <BrowserRouter>
           <MenuBar />
