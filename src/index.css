@@ -23,6 +23,10 @@ body {
   @apply text-text dark:text-text-dark /* add default text colours */
 }
 
+.list-sublist {
+  list-style-type: circle;
+}
+
 
 /* Used for segmented button, can't really be moved out easily */
 .segmented-button-container {
