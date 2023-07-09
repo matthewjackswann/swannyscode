@@ -1,12 +1,12 @@
 {
     "1": {
-        "title": "Test Project A",
-        "folder": "TPA",
-        "date": "June 29, 2021"
-    },
-    "2": {
         "title": "Puzzlerama",
         "folder": "Puzzlerama",
         "date": "August 7, 2021"
+    },
+    "2": {
+        "title": "Ant Simulation",
+        "folder": "AntSim",
+        "date": "October 2, 2021"
     }
 }

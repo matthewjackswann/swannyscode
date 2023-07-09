@@ -4,7 +4,7 @@ import UpdatesInfo from "./data.json";
 import PageNotFound from "../Pages/PageNotFound";
 
 const getContent = (path) => {
-    const Component = React.lazy(() => import(`${path}`));
+    const Component = React.lazy(() => import(`./Content/${path}`));
     return (
         <div key={path}>
             <Suspense fallback={<div>Loading...</div>}>
@@ -20,7 +20,7 @@ function UpdateContent() {
     if (!(id in UpdatesInfo && UpdatesInfo[id].extended && !UpdatesInfo[id].projectId)) return <PageNotFound />;
 
     return (<div>
-        {getContent(`Content/${UpdatesInfo[id].fileName}`)}
+        {getContent(UpdatesInfo[id].fileName)}
     </div>);
 }
 

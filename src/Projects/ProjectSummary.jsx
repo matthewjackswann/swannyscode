@@ -17,9 +17,9 @@ export const ProjectSummary = ({ id, projectDetails }) => {
     const nav = useNavigate();
 
     return (<div onClick={() => { nav("/projects/" + id); }} className="group my-2 transition-all tc hover:border-accent hover:dark:border-accent-dark rounded-lg border-solid border-2 border-primary-button dark:border-primary-button-dark cursor-pointer">
-        <div className="p-2">
+        <div className="p-2 h-full flex flex-col">
             {getContent(projectDetails.folder + "/Summary")}
-            <div className="flow-root">
+            <div className="flow-root mt-auto">
                 <span className="
                 text-accent dark:text-accent-dark
                 group-hover:text-primary-button dark:group-hover:text-primary-button-dark

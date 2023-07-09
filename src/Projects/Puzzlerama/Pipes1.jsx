@@ -34,7 +34,7 @@ function Pipes1() {
                     I will go into detail on specific parts of the program but skip over other <i>not so interesting </i>
                     parts. Because of this I have split the explanation down into different sections:
                 </p>
-                <ul className="list-disc pl-6">
+                <ul className="list-disc pl-8">
                     {[
                         ["The Algorithm", "pipes1Algorithm"],
                         ["Preprocessing the grid", "pipes1Processing"],
@@ -118,7 +118,7 @@ function Pipes1() {
             The list of pipe images are converted into pipe objects by sampling the image at specific points. The middle of each edge is sampled to test for the number of connections and which direction they are facing.
         </p>
 
-        <ul className="list-disc pl-6">
+        <ul className="list-disc pl-8">
             <li>
                 If there is only one connection then the percentage of the pipe which is the background colour is calculated. If this is greater then 35% then the pipe is a sink, otherwise it must be a tap. The colour is calculated by picking the pixel in the centre and matching it to the closes predefined pipe colour.
             </li>
@@ -164,7 +164,7 @@ function Pipes1() {
             The abstract class <i>Pipe</i> contains functions that all other pipes must implement in some way. These are:
         </p>
 
-        <ul className="list-disc pl-6">
+        <ul className="list-disc pl-8">
             <li>
                 <span className="font-semibold">center</span> - the location of the pipe in the screen capture. This is used by the robot to move the mouse in order to rotate the pipe.
             </li>
@@ -249,10 +249,10 @@ function Pipes1() {
             The grid has a method called <i>simulate()</i>. When called this returns true or false depending on whether or not the pipes allow the water to flow correctly between them and sinks are not the wrong colour. To start the simulation the <i>update()</i> method is called on all of the sources. This starts a chain reaction of updating the neighboring pipes until one returns false or all simulate correctly, returning true.
         </p>
 
-        <ul className="list-disc pl-6">
+        <ul className="list-disc pl-8">
             <li>
                 <b>Connectors</b>
-                <ul className="list-sublist pl-6">
+                <ul className="list-sublist pl-8">
                     <li>
                         When a connector is updated if first checks the direction it is being updated from is valid, false is returned if it is not, ending the simulation.
                     </li>
@@ -272,7 +272,7 @@ function Pipes1() {
                 <p>
                     As taps are what start the update chain they don't have much functionality at all. When updated they always return true. Though it seems surprising that they could be updated more then once it can happen for multiple reasons:
                 </p>
-                <ul className="list-sublist pl-6">
+                <ul className="list-sublist pl-8">
                     <li>
                         The connector directly next to the tap updates all surrounding pipes when it is updated. This includes the tap pipe.
                     </li>
@@ -289,7 +289,7 @@ function Pipes1() {
                 <p>
                     When the sinks are updated only the colour and direction needs to be checked.
                 </p>
-                <ul className="list-sublist pl-6">
+                <ul className="list-sublist pl-8">
                     <li>
                         If the direction is not the <i>inDirection</i> then false is returned. This is for the case when a pipe is pointing into the wrong side of a sink.
                     </li>

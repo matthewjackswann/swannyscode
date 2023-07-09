@@ -7,7 +7,7 @@ function MenuBar() {
             <Link to="/">
                 <h1 className='text-4xl font-bold text-accent dark:text-accent-dark flex items-center'>
                     Swanny's <br className='sm:hidden'/> Code
-                    <img src='logo192.png' alt='website logo' className='inline align-middle pl-3 h-24 sm:h-12'/>
+                    <img src='/logo192.png' alt='website logo' className='inline align-middle pl-3 h-24 sm:h-12'/>
                 </h1>
             </Link>
             <div className='lg:ml-auto sm:flex'>
