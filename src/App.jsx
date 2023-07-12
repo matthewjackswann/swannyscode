@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className='bg-background dark:bg-background-dark min-h-screen text-text dark:text-text-dark transition-colors duration-200'>
-      <div className='max-w-7xl items-center mx-auto'>
+      <div className='max-w-5xl items-center mx-auto'>
         <BrowserRouter>
           <MenuBar />
           <div className='p-5 mx-2'>
