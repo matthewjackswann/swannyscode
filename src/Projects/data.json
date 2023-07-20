@@ -13,5 +13,15 @@
         "title": "Disco Zoo",
         "folder": "DiscoZoo",
         "date": "January 15, 2022"
+    },
+    "4": {
+        "title": "Wordle Solver",
+        "folder": "Wordle",
+        "date": "Febuary 12, 2022"
+    },
+    "5": {
+        "title": "My Website",
+        "folder": "MyWebsite",
+        "date": "June 29, 2021"
     }
 }
