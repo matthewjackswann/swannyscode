@@ -1,4 +1,4 @@
-import photo from "./Media/example2.png"
+import photo from "./Media/game.png"
 
 function Summary() {
     return (<div>

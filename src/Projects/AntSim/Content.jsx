@@ -10,6 +10,7 @@ import gif2 from "./Media/gif2.gif";
 import gif3 from "./Media/gif3.gif";
 import Collapsible from "../../Components/Collapsible";
 import ImageSwapper from "../../Components/ImageSwapper";
+import CodeSnippet from "../../Components/CodeSnippet";
 
 function Content() {
     return (<div>
@@ -149,7 +150,7 @@ function Content() {
             <img className="mx-auto w-full max-w-md sm:w-1/2 p-2" src={wallAnt} alt="where the ant can go when it reaches a wall"/>
         </div>
 
-        <div className="pt-2">
+        <div className="cc mt-2 p-2 bg-background-faded dark:bg-background-faded-dark rounded-md">
             <Collapsible header={<div className="text-lg font-bold">Proof ants don't get trapped</div>}>
                 <p>
                     If an ant cannot move in any direction then a error will occur and the simulation will exit early. This means that it's important that the ant's cant get trapped. As the ant can never turn left two direction or right two directions if these are the only valid spaces the ant will become trapped. As there is a configuration where an ant can become trapped we must prove that this configuration will never happen during the simulation and only when the prerequisite that the home is un-trapped is broken.
@@ -210,11 +211,34 @@ function Content() {
             This can be further optimized using an accumulator but it was running fast enough that I didn't bother.
         </p>
 
-        <p className="pt-3">
+        <p className="py-3">
             Below is the code for blurring an image in only one channel <b>c</b>. In the actual code only channels <b>0</b> and <b>1</b> are blurred as the third channel <b>2</b> is unused so is wasted computation.
         </p>
 
-        <p>todo code</p>
+        <CodeSnippet className="c">
+            {`// stores the data once blured in the horizontal direction
+guchar *hBlur = malloc(s->width * s->height * 3 * sizeof(guchar));
+for (int y = 0; y < s->height; y++) { // blurs in the horizontal direction
+    for (int x = 0; x < s->width; x++) {
+        int total = 0;
+        for (int dx = -r; dx <= r; dx++) {
+            int xpos = (x + dx + s->width) % s->width;
+            total += s->data[3*(y*s->width+xpos)+c];
+        }
+        hBlur[3*(y*s->width+x)+c] = total / (2*r+1);
+    }
+}
+for (int x = 0; x < s->width; x++) { // blurs in the vertical direction
+    for (int y = 0; y < s->height; y++) {
+        int total = 0;
+        for (int dy = -r; dy <= r; dy++) {
+            int ypos = (y + dy + s->height) % s->height;
+            total += hBlur[3*(ypos*s->width+x)+c];
+        }
+        s->data[3*(y*s->width+x)+c] = total / ((2*r+1) * blurReductionFactor);
+    }
+}`}
+        </CodeSnippet>
 
         <br />
 

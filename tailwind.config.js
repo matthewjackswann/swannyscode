@@ -10,11 +10,13 @@ export const theme = {
     'primary-button': '#8a985d',
     'secondary-button': '#fbf9fb',
     'accent': '#365159',
+    'background-faded': '#d9ced6',
     'text-dark': '#fbfefd',
     'background-dark': '#040b09',
     'primary-button-dark': '#55a8c3',
     'secondary-button-dark': '#0d1326',
     'accent-dark': '#5571c3',
+    'background-faded-dark': '#0d1c18',
   }
 };
 export const plugins = [];

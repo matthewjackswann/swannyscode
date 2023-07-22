@@ -1,4 +1,5 @@
 import Collapsible from "../../Components/Collapsible";
+import CodeSnippet from "../../Components/CodeSnippet";
 
 const Update3 = () => {
     return (<div>
@@ -15,9 +16,10 @@ const Update3 = () => {
             I've also removed my CTF write up section and replaced it with and Updates page. As the third year of university has been very busy, I've not had much time to compeate in CTFs and instead have done a lot of other random coding competitions. I want to record them somewhere and it made the most sense to change my CTF page into a general updates page.
         </p><br />
 
-        {/* <p>
-            I've also re-written my copy-with-style <a className="tc underline hover:text-primary-button dark:hover:text-primary-button-dark" href="https://github.com/matthewjackswann/copy-with-style">fork</a> entirely to use custom colours, tailwind styling, and to directly export react jsx, without the need of using <b>selenium</b> and a 3rd party website.
-        </p> */}
+        <p>
+            As I've switched to using Tailwind for styling, my current method for code no longer works as well. It was very janky anyway so I've got rid of the old method entirely. I now use <a className="tc underline hover:text-primary-button dark:hover:text-primary-button-dark" href="https://www.npmjs.com/package/react-highlight">react-highlight</a> which is built using <a className="tc underline hover:text-primary-button dark:hover:text-primary-button-dark" href="https://highlightjs.org/">highlight.js</a> and is a much better solution. As they styling is done using css style sheets, I updated my <i>DarkModeToggle</i> component to add the code dark mode sheet to the webpage when toggling, alowing code snippets to update as well.
+        </p>
+
     </div>);
 }
 
@@ -40,8 +42,55 @@ const Update2 = () => {
             converter so I don't have to try and do that myself. The full code is shown below:
         </p><br />
 
-        <Collapsible header={<div className="text-lg font-bold">CodeFormatter.py</div>}>
-            todo add code here
+        <Collapsible className="cc mt-2 p-2 bg-background-faded dark:bg-background-faded-dark rounded-md" header={<div className="text-lg font-bold">CodeFormatter.py</div>}>
+            <CodeSnippet className="python rounded-md">
+                {`from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
+ 
+import pyperclip # for copying
+import sys
+import time
+import re
+ 
+def convertHTML(html):
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+    driver.implicitly_wait(1)
+    driver.get("https://magic.reactjs.net/htmltojsx.htm")
+    pyperclip.copy(html) # copy html so it can be pasted
+    ActionChains(driver).send_keys(Keys.TAB + Keys.SPACE + Keys.TAB + Keys.DELETE * 200).perform()
+    ActionChains(driver).key_down(Keys.CONTROL).send_keys("v").key_up(Keys.CONTROL).perform() # paste html
+    time.sleep(1) # wait for conversion
+    output = driver.find_elements(By.CLASS_NAME, "CodeMirror-code")[1].get_attribute('innerText')
+    output = output.replace(
+        "<span style={{display: 'inline-block'}} className=\\"line\\">",
+        "<span style={{display: 'inline-block'}} className=\\"line\\">\\n"
+    )
+    driver.quit()
+    f = open(sys.path[0] + "/converted.html", "w") # saved as sometimes copy doesn't work correctly
+    f.write(html)
+    f.close()
+    return output
+ 
+def formatHTML(html):
+    html = re.sub("<pre style=\\".*?\\"><code style=\\".*?\\">", "<pre class=\\"code\\"><code>", html) # remove background
+    f = open(sys.path[0] + "/formatted.html", "w") # saved as sometimes copy doesn't work correctly
+    f.write(html)
+    f.close()
+    return html
+ 
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("fix args")
+    else:
+        formatted = formatHTML(sys.argv[1])
+        converted = convertHTML(formatted)
+        pyperclip.copy(converted)
+        print("Success")`}
+            </CodeSnippet>
         </Collapsible>
 
         <p>

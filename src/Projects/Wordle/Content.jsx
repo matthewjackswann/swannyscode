@@ -1,4 +1,5 @@
 import InPageLink from "../../Components/InPageLink";
+import CodeSnippet from "../../Components/CodeSnippet";
 import ImageSwapper from "../../Components/ImageSwapper";
 import example1 from "./Media/example1.png";
 import example2 from "./Media/example2.png";
@@ -49,7 +50,23 @@ function Content() {
             I decided to score each word by maximizing the most common characters in the most common position. To do this the total number of each character in each position is calculated and this is used to score each word. The word with the largest score is then calculated.
         </p>
 
-        <br /><br />todo code<br /><br />
+        <CodeSnippet className="python my-3">
+            {`# scores a word given the frequency of each letter in each position
+def scoreWord(word, counts):
+    score = 0
+    for i, c in enumerate(word):
+        score += counts[i][c]
+    return score
+ 
+# counts the frequency of each letter in each position
+# and returns the word corresponding to the highest score
+def wordle(wordList):
+    counts = [{}, {}, {}, {}, {}]
+    for word in wordList:
+        for i, c in enumerate(word): # character c in position i
+            counts[i][c] = counts[i].get(c, 0) + 1 # increased the count by 1
+    return max(wordList, key=lambda word: scoreWord(word, counts))`}
+        </CodeSnippet>
 
         <p>
             This works quite well but for the word list I'm using. The highest scoring word is: <b>SORES</b><br />
@@ -60,7 +77,27 @@ function Content() {
             To prevent this I created a second wordle function called <i>wordleIgnore</i>. This penalizes words with duplicate characters by scoring them as <b>(score / number of occurrences)</b>. Additionally, it also takes a list of characters which information is already known about. These have their scores set to 0 so that other characters are much more likely to be chosen.
         </p>
 
-        <br /><br />todo code<br /><br />
+        <CodeSnippet className="python my-3">
+            {`# scores a word given the frequency of each letter in each position.
+# decreases score on repeated letters to get larger coverage of letters
+def scoreWordIgnore(word, counts):
+    score = 0
+    for i, c in enumerate(word):
+        score += counts[i][c] // (word.count(c))
+    return score
+ 
+# counts the frequency of each letter in each position ignoring the set of letters
+# information is already known about and returns the highest scoring word
+def wordleIgnore(wordList, ignore):
+    counts = [{}, {}, {}, {}, {}]
+    for word in wordList:
+        for i, c in enumerate(word):
+            counts[i][c] = counts[i].get(c, 0) + 1
+    for c in ignore:
+        for count in counts:
+            count[c] = 0
+    return max(wordList, key=lambda word: scoreWordIgnore(word, counts))`}
+        </CodeSnippet>
 
         <br />
 
@@ -136,7 +173,9 @@ function Content() {
             The list of words all 42 settings failed to find are:
         </p>
 
-        <br /><br />todo words<br /><br />
+        <p className="cc bg-background-faded dark:bg-background-faded-dark p-2 my-2 rounded-md">
+            dumps, vibes, pates, loxes, moper, paves, bider, veals, vined, rapes, veeps, vires, wears, razes, tames, vends, sawer, oozes, vests, vails, vales, dills, poxes, zeals, dinks, vapes, wales, fifes, vases, vaunt, finks, waxer, gears, zests, fells, jiber, hinds, heeds, boded, hives, vower, gages, jilts, eases, eaves, jings, kikes, coked, doges, jives, gapes, faxer, faxed, liker, fazes, coxed, coxes, mimes, mimer, jakes, nines, janes, dozes, laker, peats, lases, laxer, lazes, loges, yummy, jowls
+        </p>
 
         <p>
             By these extremely crude stats it looks like a cutoff of 3 and a search until 2 performs the best

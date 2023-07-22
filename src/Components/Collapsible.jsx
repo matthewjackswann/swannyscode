@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
-function Collapsible({children, header}) {
+function Collapsible({children, header, className}) {
 
     const divRef = useRef(null);
 
@@ -16,7 +16,7 @@ function Collapsible({children, header}) {
         }
     }
 
-    return (<div>
+    return (<div className={className}>
         <div className="flex cursor-pointer" onClick={toggleDropdown}>
             {header}
             <FontAwesomeIcon icon={faChevronDown} className="float-right ml-auto p-2"/>

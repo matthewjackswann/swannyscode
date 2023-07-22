@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 
+// light style sheet - must be in public folder
+import "highlight.js/styles/atom-one-light.css"
+
 function DarkModeToggle({className}) {
 
     let [inDarkMode, setDarkMode] = useState(localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches));
@@ -12,6 +15,16 @@ function DarkModeToggle({className}) {
         } else {
             document.documentElement.classList.remove('dark');
         }
+
+        // setup code colours
+        var link = document.createElement("link");
+        link.type = "text/css";
+        link.rel = "stylesheet";
+        // dark style sheet - must be in public folder
+        link.href = inDarkMode ? "/atom-one-dark.css": "";
+        document.head.appendChild(link);
+
+        return () => { document.head.removeChild(link); }
     }, [inDarkMode]);
 
     return (
