@@ -8,7 +8,7 @@ import SegmentedButton from "../Components/SegmentedButton";
 const newestProjects = Object.keys(ProjectInfo).sort((a, b) => new Date(ProjectInfo[b].date) - new Date(ProjectInfo[a].date)).slice(0,2);
 const newestUpdates = Object.keys(UpdateInfo).filter(p => !UpdateInfo[p].catagories.includes("Project")).sort((a, b) => new Date(UpdateInfo[b].date) - new Date(UpdateInfo[a].date)).slice(0,5);
 const featuredProjects = ["1", "2"];
-const featuredUpdates = ["4"];
+const featuredUpdates = ["1"];
 
 const ProjectsPane = () => {
     let [showNewestProject, setShowNewestProject] = useState(false);

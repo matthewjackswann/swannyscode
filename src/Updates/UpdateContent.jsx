@@ -20,6 +20,8 @@ function UpdateContent() {
     if (!(id in UpdatesInfo && UpdatesInfo[id].extended && !UpdatesInfo[id].projectId)) return <PageNotFound />;
 
     return (<div>
+        <h1 className="text-5xl">{UpdatesInfo[id].title}</h1>
+        <p className="text-2xl pb-4">{UpdatesInfo[id].date}</p>
         {getContent(UpdatesInfo[id].fileName)}
     </div>);
 }

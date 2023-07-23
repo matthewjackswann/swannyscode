@@ -1,31 +1,37 @@
 {
     "1": {
-        "title": "Test Update A",
-        "fileName": "Update1",
-        "extended": true,
-        "projectId": "1",
-        "date": "June 29, 2021",
-        "catagories": ["Competition", "Project", "CTF", "Group Work", "Extended"]
-    },
-    "2": {
-        "title": "Test Update B",
-        "fileName": "Update1",
+        "title": "CSS Game Jam 2022",
+        "fileName": "GameJam2022",
         "extended": false,
-        "date": "June 30, 2021",
+        "date": "November 3, 2022",
         "catagories": ["Competition", "Group Work"]
     },
-    "3": {
-        "title": "Test Update C",
-        "fileName": "Update1",
+    "2": {
+        "title": "CSS Art Hack 2023",
+        "fileName": "ArtHack2023",
         "extended": true,
-        "date": "June 27, 2021",
-        "catagories": ["CTF", "Extended"]
+        "date": "February 19, 2023",
+        "catagories": ["Competition", "Group Work", "Extended"]
+    },
+    "3": {
+        "title": "CSS BrisHack 2023",
+        "fileName": "BrisHack2023",
+        "extended": false,
+        "date": "February 27, 2023",
+        "catagories": ["Competition", "Group Work"]
     },
     "4": {
-        "title": "Test Update D",
-        "fileName": "Update1",
+        "title": "Bloomberg's Bpuzzled 2023 Finals",
+        "fileName": "Bpuzzled2023",
+        "extended": false,
+        "date": "March 31, 2023",
+        "catagories": ["Competition", "Group Work"]
+    },
+    "5": {
+        "title": "3rd Year Team Project",
+        "fileName": "GamesProject",
         "extended": true,
-        "date": "June 28, 2021",
-        "catagories": ["Competition", "Extended"]
+        "date": "May 9, 2023",
+        "catagories": ["Project", "Group Work", "Extended"]
     }
 }
