@@ -1,8 +1,8 @@
-import diff1 from "./Media/ArtHack2023/diff1.png";
-import diff2 from "./Media/ArtHack2023/diff2.png";
-import diff3 from "./Media/ArtHack2023/diff3.png";
-import diff4 from "./Media/ArtHack2023/diff4.png";
-import piano from "./Media/ArtHack2023/piano.mp4";
+import diff1 from "../Media/ArtHack2023/diff1.png";
+import diff2 from "../Media/ArtHack2023/diff2.png";
+import diff3 from "../Media/ArtHack2023/diff3.png";
+import diff4 from "../Media/ArtHack2023/diff4.png";
+import piano from "../Media/ArtHack2023/piano.mp4";
 
 function ArtHack() {
 

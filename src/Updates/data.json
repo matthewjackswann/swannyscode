@@ -41,5 +41,12 @@
         "projectId": 5,
         "date": "July 15, 2023",
         "categories": ["Project", "Extended"]
+    },
+    "7": {
+        "title": "Computer Graphics",
+        "fileName": "Graphics",
+        "extended": false,
+        "date": "December 7, 2022",
+        "categories": ["Project"]
     }
 }

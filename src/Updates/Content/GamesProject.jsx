@@ -1,5 +1,5 @@
-import poster from "./Media/GamesProject/poster.png";
-import report from "./Media/GamesProject/report.pdf";
+import poster from "../Media/GamesProject/poster.png";
+import report from "../Media/GamesProject/report.pdf";
 
 function GamesProject() {
     return (<div>
