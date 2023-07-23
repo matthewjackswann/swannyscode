@@ -4,34 +4,42 @@
         "fileName": "GameJam2022",
         "extended": false,
         "date": "November 3, 2022",
-        "catagories": ["Competition", "Group Work"]
+        "categories": ["Competition", "Group Work"]
     },
     "2": {
         "title": "CSS Art Hack 2023",
         "fileName": "ArtHack2023",
         "extended": true,
         "date": "February 19, 2023",
-        "catagories": ["Competition", "Group Work", "Extended"]
+        "categories": ["Competition", "Group Work", "Extended"]
     },
     "3": {
         "title": "CSS BrisHack 2023",
         "fileName": "BrisHack2023",
         "extended": false,
         "date": "February 27, 2023",
-        "catagories": ["Competition", "Group Work"]
+        "categories": ["Competition", "Group Work"]
     },
     "4": {
         "title": "Bloomberg's Bpuzzled 2023 Finals",
         "fileName": "Bpuzzled2023",
         "extended": false,
         "date": "March 31, 2023",
-        "catagories": ["Competition", "Group Work"]
+        "categories": ["Competition", "Group Work"]
     },
     "5": {
         "title": "3rd Year Team Project",
         "fileName": "GamesProject",
         "extended": true,
         "date": "May 9, 2023",
-        "catagories": ["Project", "Group Work", "Extended"]
+        "categories": ["Project", "Group Work", "Extended"]
+    },
+    "6": {
+        "title": "Tailwind Website Update",
+        "fileName": "TailwindUpdate",
+        "extended": true,
+        "projectId": 5,
+        "date": "July 15, 2023",
+        "categories": ["Project", "Extended"]
     }
 }

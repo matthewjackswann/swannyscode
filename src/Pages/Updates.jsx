@@ -14,7 +14,7 @@ export const getContent = (path) => {
     );
 }
 
-const catagoryColours = {
+const categoryColours = {
     "Competition": "#0075ca",
     "Project": "#008672",
     "CTF": "#b60205",
@@ -22,33 +22,33 @@ const catagoryColours = {
     "Extended": "#cbab0b"
 }
 
-export const getCatagoryLabel = (catagory, filters) => {
-    const pillStyle = filters.has(catagory) || filters.size === 0 ?
-        {"color": catagoryColours[catagory], "backgroundColor": catagoryColours[catagory] + "70"} :
-        {"color": catagoryColours[catagory] + "80", "backgroundColor": catagoryColours[catagory] + "50"};
+export const getCategoryLabel = (category, filters) => {
+    const pillStyle = filters.has(category) || filters.size === 0 ?
+        {"color": categoryColours[category], "backgroundColor": categoryColours[category] + "70"} :
+        {"color": categoryColours[category] + "80", "backgroundColor": categoryColours[category] + "50"};
 
-    return (<div key={catagory} className="inline-block rounded-full px-2 mr-1 align-super text-lg" style={pillStyle}>
-        {catagory}
+    return (<div key={category} className="inline-block rounded-full px-2 mr-1 align-super text-lg" style={pillStyle}>
+        {category}
     </div>);
 }
 
-const getFilterLabel = (catagory, filters, setFilters) => {
-    const pillStyle = filters.has(catagory) ?
-        {"color": catagoryColours[catagory], "backgroundColor": catagoryColours[catagory] + "70"} :
+const getFilterLabel = (category, filters, setFilters) => {
+    const pillStyle = filters.has(category) ?
+        {"color": categoryColours[category], "backgroundColor": categoryColours[category] + "70"} :
         {"color": "#818589", "backgroundColor": "#81858970"};
 
     const onFilterClick = () => {
         setFilters(prev => {
             let n = new Set(prev);
-            if (prev.has(catagory)) n.delete(catagory);
-            else n.add(catagory);
+            if (prev.has(category)) n.delete(category);
+            else n.add(category);
             return n;
         })
     }
 
-    return (<div key={catagory} className="inline-block rounded-full px-2 mr-1 cursor-pointer text-lg" style={pillStyle} 
+    return (<div key={category} className="inline-block rounded-full px-2 mr-1 cursor-pointer text-lg" style={pillStyle} 
     onClick={onFilterClick}>
-        {catagory}
+        {category}
     </div>);
 }
 
@@ -61,21 +61,21 @@ function Updates() {
     const sortOptions = [
         ["Newest First", () => setUpdateKeys(prev => [...prev].sort((a, b) => new Date(UpdatesInfo[b].date) - new Date(UpdatesInfo[a].date)))], 
         ["Oldest First", () => setUpdateKeys(prev => [...prev].sort((a, b) => new Date(UpdatesInfo[a].date) - new Date(UpdatesInfo[b].date)))], 
-        ["Alphabetical (A - Z)", () => setUpdateKeys(prev => [...prev].sort((a, b) => (UpdatesInfo[a].title).localeCompare(UpdatesInfo[b].title)))], 
-        ["Alphabetical (Z - A)", () => setUpdateKeys(prev => [...prev].sort((a, b) => (UpdatesInfo[b].title).localeCompare(UpdatesInfo[a].title)))]
+        // ["Alphabetical (A - Z)", () => setUpdateKeys(prev => [...prev].sort((a, b) => (UpdatesInfo[a].title).localeCompare(UpdatesInfo[b].title)))], 
+        // ["Alphabetical (Z - A)", () => setUpdateKeys(prev => [...prev].sort((a, b) => (UpdatesInfo[b].title).localeCompare(UpdatesInfo[a].title)))]
     ];
 
     return (
         <div>
             <h1 className="text-4xl pb-2">Updates</h1>
             <p>
-                These are some updates about a few events and achivements I have made.
+                These are some updates about a few events and achievements I have made.
                 Not all of them a worth creating a writeup on but I want to save them somewhere so I can remember
                 all the random stuff I've worked on, and the people I worked with them on.
             </p>
             <br />
             <p className="lg:inline-block lg:mr-4">Filters:</p>
-            {Object.keys(catagoryColours).map(c => getFilterLabel(c, filters, setFilters))}
+            {Object.keys(categoryColours).map(c => getFilterLabel(c, filters, setFilters))}
             <br />
 
             <select className="px-2 bg-accent dark:bg-accent-dark text-secondary-button dark:text-secondary-button-dark rounded-xl float-right cursor-pointer" style={{"WebkitAppearance": "none"}}
