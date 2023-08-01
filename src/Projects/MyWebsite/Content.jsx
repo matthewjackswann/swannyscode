@@ -70,14 +70,14 @@ def convertHTML(html):
         "<span style={{display: 'inline-block'}} className=\\"line\\">\\n"
     )
     driver.quit()
-    f = open(sys.path[0] + "/converted.html", "w") # saved as sometimes copy doesn't work correctly
+    f = open(sys.path[0] + "/converted.html", "w") # saved as sometimes copy doesn’t work correctly
     f.write(html)
     f.close()
     return output
  
 def formatHTML(html):
     html = re.sub("<pre style=\\".*?\\"><code style=\\".*?\\">", "<pre class=\\"code\\"><code>", html) # remove background
-    f = open(sys.path[0] + "/formatted.html", "w") # saved as sometimes copy doesn't work correctly
+    f = open(sys.path[0] + "/formatted.html", "w") # saved as sometimes copy doesn’t work correctly
     f.write(html)
     f.close()
     return html

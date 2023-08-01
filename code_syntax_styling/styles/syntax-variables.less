@@ -1,0 +1,32 @@
+// Official Syntax Variables -----------------------------------
+
+// General colors
+@syntax-background-color:      @syntax-bg;
+
+@syntax-color-renamed:  hsl(208, 100%, 60%);
+@syntax-color-added:    hsl(150,  60%, 54%);
+@syntax-color-modified: hsl(40,   60%, 70%);
+@syntax-color-removed:  hsl(0,    70%, 60%);
+
+// For language entity colors
+@syntax-color-variable:   @hue-5;
+@syntax-color-constant:   @hue-6;
+@syntax-color-property:   @syntax-fg;
+@syntax-color-value:      @syntax-fg;
+@syntax-color-function:   @hue-2;
+@syntax-color-method:     @hue-2;
+@syntax-color-class:      @hue-6-2;
+@syntax-color-keyword:    @hue-3;
+@syntax-color-tag:        @hue-5;
+@syntax-color-attribute:  @hue-6;
+@syntax-color-import:     @hue-3;
+@syntax-color-snippet:    @hue-4;
+
+
+// Custom Syntax Variables -----------------------------------
+// Don't use in packages
+
+@syntax-deprecated-fg: darken(@syntax-color-modified, 50%);
+@syntax-deprecated-bg: @syntax-color-modified;
+@syntax-illegal-fg:    white;
+@syntax-illegal-bg:    @syntax-color-removed;

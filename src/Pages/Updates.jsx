@@ -87,7 +87,7 @@ function Updates() {
             {
                 updateKeys.filter(id => {
                     for (const f of filters) {
-                        if (!UpdatesInfo[id].catagories.includes(f)) return false;
+                        if (!UpdatesInfo[id].categories.includes(f)) return false;
                     }
                     return true;
                 })

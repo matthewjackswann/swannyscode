@@ -48,5 +48,12 @@
         "extended": false,
         "date": "December 7, 2022",
         "categories": ["Project"]
+    },
+    "8": {
+        "title": "Space Pirates",
+        "fileName": "CTFs/SpacePirates",
+        "extended": true,
+        "date": "November 21, 2021",
+        "categories": ["Competition", "CTF", "Extended"]
     }
 }
