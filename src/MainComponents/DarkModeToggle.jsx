@@ -17,8 +17,8 @@ function DarkModeToggle({className}) {
         var link = document.createElement("link");
         link.type = "text/css";
         link.rel = "stylesheet";
-        // style sheets must be in public folder
-        link.href = inDarkMode ? "/syntax-styles-dark.css": "/syntax-styles-light.css";
+        // style sheets must be in public folder, light set in index.html to prevent flickering
+        link.href = inDarkMode ? "/syntax-styles-dark.css": "";
         document.head.appendChild(link);
 
         return () => { document.head.removeChild(link); }
