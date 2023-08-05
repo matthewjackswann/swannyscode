@@ -21,7 +21,7 @@ function Collapsible({children, header, className}) {
             {header}
             <FontAwesomeIcon icon={faChevronDown} className="float-right ml-auto p-2"/>
         </div>
-        <div ref={divRef} className="transition-all grid grid-rows-[0fr]">
+        <div ref={divRef} className="transition-[grid-template-rows] grid grid-rows-[0fr]">
             <div className="overflow-hidden">
                 {children}
             </div>
