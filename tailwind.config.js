@@ -10,7 +10,7 @@ export const theme = {
     'primary-button': '#8a985d',
     'secondary-button': '#fbf9fb',
     'accent': '#365159',
-    'background-faded': '#d9ced6',
+    'background-faded': '#f2f2f2',
     'text-dark': '#fbfefd',
     'background-dark': '#040b09',
     'primary-button-dark': '#55a8c3',

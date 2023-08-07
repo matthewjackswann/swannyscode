@@ -4,8 +4,11 @@
         "Bpuzzled",
         "Bris",
         "chall",
+        "coeff",
+        "Coeffs",
         "colors",
         "EMEA",
-        "tensorflow"
+        "tensorflow",
+        "vals"
     ]
 }
