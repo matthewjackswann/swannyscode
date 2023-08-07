@@ -11,6 +11,7 @@ import gif3 from "./Media/gif3.gif";
 import Collapsible from "../../Components/Collapsible";
 import ImageSwapper from "../../Components/ImageSwapper";
 import CodeSnippet from "../../Components/CodeSnippet";
+import { AntSimBlur } from "./Media/Code";
 
 function Content() {
     return (<div>
@@ -215,30 +216,7 @@ function Content() {
             Below is the code for blurring an image in only one channel <b>c</b>. In the actual code only channels <b>0</b> and <b>1</b> are blurred as the third channel <b>2</b> is unused so is wasted computation.
         </p>
 
-        <CodeSnippet className="c">
-            {`// stores the data once blured in the horizontal direction
-guchar *hBlur = malloc(s->width * s->height * 3 * sizeof(guchar));
-for (int y = 0; y < s->height; y++) { // blurs in the horizontal direction
-    for (int x = 0; x < s->width; x++) {
-        int total = 0;
-        for (int dx = -r; dx <= r; dx++) {
-            int xpos = (x + dx + s->width) % s->width;
-            total += s->data[3*(y*s->width+xpos)+c];
-        }
-        hBlur[3*(y*s->width+x)+c] = total / (2*r+1);
-    }
-}
-for (int x = 0; x < s->width; x++) { // blurs in the vertical direction
-    for (int y = 0; y < s->height; y++) {
-        int total = 0;
-        for (int dy = -r; dy <= r; dy++) {
-            int ypos = (y + dy + s->height) % s->height;
-            total += hBlur[3*(ypos*s->width+x)+c];
-        }
-        s->data[3*(y*s->width+x)+c] = total / ((2*r+1) * blurReductionFactor);
-    }
-}`}
-        </CodeSnippet>
+        <CodeSnippet code={AntSimBlur} />
 
         <br />
 

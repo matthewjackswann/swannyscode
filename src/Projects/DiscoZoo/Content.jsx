@@ -4,6 +4,7 @@ import image1 from "./Media/example1.png";
 import image2 from "./Media/example2.png";
 import image3 from "./Media/example3.png";
 import Latex from "react-latex-next";
+import { DiscoZooGridCode } from "./Media/Code";
 
 function DiscoZoo() {
 
@@ -91,30 +92,7 @@ function DiscoZoo() {
             If more then one animal is given then the possible positions of the last n-1 animals are calculated. For each of these possible grids, any place the first animal fits is added to the list of possible grids. This list is then returned.
         </p>
 
-        <CodeSnippet className="my-4 js">
-            {`const getPossibleGrids = (animals) => {
-    if (animals.length === 0) {
-        return [{}];
-    }
-    const animalMaxX = gridSize + 1 - animalInfo.animals[animals[0]].width;
-    const animalMaxY = gridSize + 1 - animalInfo.animals[animals[0]].height;
-    let newGrids = [];
-    // list of grids with the next n-1 animals
-    let partialGrids = getPossibleGrids(animals.slice(1));
-    partialGrids.forEach(grid => {
-        for (let topX = 0; topX < animalMaxX; topX++) {
-            for (let topY = 0; topY < animalMaxY; topY++) {
-                let g = {...grid};
-                g[animals[0]] = {x: topX, y: topY};
-                if (checkGrid(g)) { // checks if the grid is valid
-                    newGrids.push(g);
-                }
-            }
-        }
-    });
-    return newGrids;
-};`}
-        </CodeSnippet>
+        <CodeSnippet className="my-4" code={DiscoZooGridCode} />
 
         <p>
             This is then reduced into a 5x5 grid of key value pairs with the frequency of each animal. The score of each square is then calculated using the following simple formula:

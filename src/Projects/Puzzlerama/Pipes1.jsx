@@ -14,6 +14,7 @@ import animation4 from "./Media/animation4.gif";
 import InPageLink from "../../Components/InPageLink";
 import ImageSwapper from "../../Components/ImageSwapper";
 import CodeSnippet from "../../Components/CodeSnippet";
+import { PuzzleramaSol1Code, PuzzleramaSol2Code, PuzzleramaSubmitCode } from "./Media/Code";
 
 function Pipes1() {
     return (<div>
@@ -68,28 +69,7 @@ function Pipes1() {
             We use this logic in the first part of the algorithm, which fixes pipes by ensuring they are properly connected to any surrounding fixed pipes. This can only be done if there is only one valid rotation for the pipe. The algorithm requires a view of the grid and a list of unfixed pipes. Each recursive call it removes pipes from the unfixed pipes list.
         </p>
 
-        <CodeSnippet className="java my-2">
-            {`private boolean solve(List<Point2D> unFixed) {
-    // used for recursive call, if everything is fixed return if it is solved
-    if (unFixed.isEmpty()) return solved();
-    boolean partFixed = true;
-    while (partFixed) { // while at least one pipe was fixed the previous iteration
-        partFixed = false;
-        List<Pipe> toFix = new ArrayList<>();
-        for (Pipe pipe : unFixed) {
-            List<Integer> validRotations = pipe.getValidRotations(unFixed);
-            if (validRotations.size() == 1) { // if there is only one valid rotation
-                pipe.setRotation(validRotations.get(0)); // set it's rotation to that
-                partFixed = true;
-                toFix.add(pipe); // fix the pipe
-            }
-        }
-        // remove the fixed pipes from the unfixed list
-        unFixed.removeIf(toFix::contains);
-    }
-    if (unFixed.isEmpty()) return solved();
-    // continues to part two of the algorithm`}
-        </CodeSnippet>
+        <CodeSnippet className="my-2" code={PuzzleramaSol1Code} />
 
         <div className="md:flex justify-center">
             <img className="m-auto p-3" src={fourWayPipe} alt="pipe game" />
@@ -100,26 +80,7 @@ function Pipes1() {
             </p>
         </div>
 
-        <CodeSnippet className="java my-2">
-            {`    // otherwise makes assumption
-    Pipe newFixedPipe = unFixed.get(0); // selects the first unfixed pipe
-    unFixed.remove(newFixedPipe); // removes it from the unfixed list
-    List<Integer> validRotations = newFixedPipe.getValidRotations(unFixed);
-    for (int rotation: validRotations) {
-        // presumes that this rotation is the correct one
-        newFixedPipe.setRotation(rotation);
-        // if the grid can be solved then the presumption is correct
-        if (solve(new ArrayList<>(unFixed))) {
-            return true;
-        } 
-        // if the grid can't be solved the grid is
-        //incorrect and moves onto the next valid rotation
-    }
-    // if all valid rotations are invalid then a previous assumption must 
-    // be wrong so false is returned. This will move the assumption on to another one.
-    return false;
-}`}
-        </CodeSnippet>
+        <CodeSnippet className="my-2" code={PuzzleramaSol2Code} />
 
         <p className="pb-2">
             To try and better show the algorithm I've made a simple example image to show how the algorithm would try and solve this made up puzzle.
@@ -387,33 +348,7 @@ function Pipes1() {
 
         <p>The following code has been reduced slightly for simplicity</p>
 
-        <CodeSnippet className="java my-2">
-            {`public void run() {
-    boolean running = true;
-    while (running) {
-        Tuple3<AtomicBoolean, Pipe, Integer> instruction = instructions.take();
-        // if terminating instruction stop
-        if (Pipe.nullPipe.equals(instruction.getSecond())) running = false;
-        else if (instruction.getFirst().get()) { // process instruction as it's valid
-            Pipe pipe = instruction.getSecond();
-            int targetRotation = instruction.getThird();
-            if (targetRotation >= pipe.getMaxRotation())
-                throw new RuntimeException("Can't rotate that much");
-            int currentRotation = currentRotations.getOrDefault(pipe, 0);
-            if (currentRotation != targetRotation) {
-                // while target != current, rotates the pipe
-                while (currentRotation != targetRotation) {
-                    click(pipe.getCenter());
-                    currentRotation = (currentRotation + 1) % pipe.getMaxRotation();
-                    // waits for animation to finish
-                    TimeUnit.MILLISECONDS.sleep(delay);
-                }
-                currentRotations.put(pipe, currentRotation);
-            }
-        }
-    }
-}`}
-        </CodeSnippet>
+        <CodeSnippet className="my-2" code={PuzzleramaSubmitCode} />
         
         <br />
 
