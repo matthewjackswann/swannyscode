@@ -55,5 +55,12 @@
         "extended": true,
         "date": "November 21, 2021",
         "categories": ["Competition", "CTF", "Extended"]
+    },
+    "9": {
+        "title": "Insane Bolt",
+        "fileName": "CTFs/InsaneBolt",
+        "extended": true,
+        "date": "November 21, 2021",
+        "categories": ["Competition", "CTF", "Extended"]
     }
 }

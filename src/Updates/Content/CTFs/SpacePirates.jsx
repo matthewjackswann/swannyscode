@@ -7,7 +7,7 @@ function SpacePirates() {
 
     return (<div>
         <p>
-            This is one of the cryptography challenges in the HTB Uni CTF Qualifiers 2021.
+            This is one of the cryptography challenges from the HTB Uni CTF Qualifiers 2021.
         </p>
 
         <p className="pt-4">
