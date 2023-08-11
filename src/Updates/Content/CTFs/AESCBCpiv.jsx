@@ -31,7 +31,7 @@ const InteractiveEncryption = ({hideMessage, hiddenFlag, className}) => {
     const block1 = simpleHash(1, message.slice(0, 8));
     const block2 = simpleHash(2, message.slice(8, 16));
     const block3 = simpleHash(3, message.slice(16, 24));
-    const hashed = block1 + block2 + block3;
+    const hashed = block1 && block2 && block3 ? block1 + block2 + block3 : "   Invalid character!   ";
     const shownMessage = hideMessage ? plaintext + "????????????????????????" : message;
     return (<div className={className}>
         <p className="pb-2">Message to encrypt: <input type="text" className="bg-opacity-100 bg-background-faded dark:bg-background-faded-dark focus:outline-accent dark:focus:outline-accent-dark border-[1px] rounded-md pl-1" value={plaintext} onChange={e => setPlaintext(e.target.value.toLowerCase().slice(0,24))}/></p>

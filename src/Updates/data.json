@@ -54,14 +54,14 @@
         "fileName": "CTFs/SpacePirates",
         "extended": true,
         "date": "November 21, 2021",
-        "categories": ["Competition", "CTF", "Extended"]
+        "categories": ["CTF", "Extended"]
     },
     "9": {
         "title": "Insane Bolt",
         "fileName": "CTFs/InsaneBolt",
         "extended": true,
         "date": "November 21, 2021",
-        "categories": ["Competition", "CTF", "Extended"]
+        "categories": ["CTF", "Extended"]
     },
     "10": {
         "title": "AES CBC with predictable IV",
