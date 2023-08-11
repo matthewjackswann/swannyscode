@@ -62,5 +62,12 @@
         "extended": true,
         "date": "November 21, 2021",
         "categories": ["Competition", "CTF", "Extended"]
+    },
+    "10": {
+        "title": "AES CBC with predictable IV",
+        "fileName": "CTFs/AESCBCpiv",
+        "extended": true,
+        "date": "December 5, 2021",
+        "categories": ["Competition", "CTF", "Extended"]
     }
 }

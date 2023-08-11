@@ -11,6 +11,10 @@ body {
 
 body {
   @apply transition-colors duration-200; /* add transition to everything when switiching between light and dark mode */
+  @apply bg-background;
+  @apply dark:bg-background-dark;
+  @apply tc;
+  overflow-y: scroll;
   font-size: 18px; /* I wanted the default font size to be slightly larger */
 }
 
