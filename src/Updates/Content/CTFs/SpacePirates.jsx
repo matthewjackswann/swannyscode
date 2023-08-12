@@ -14,11 +14,11 @@ function SpacePirates() {
             We are given a zipped folder containing two files. A python script which encodes a secret key and the file created by the script.
         </p>
 
-        <Collapsible className="mt-2 p-2 bg-background-faded dark:bg-background-faded-dark rounded-md" header={<div className="text-lg font-bold">chall.py</div>}>
+        <Collapsible className="tc mt-2 p-2 bg-background-faded dark:bg-background-faded-dark rounded-md" header={<div className="text-lg font-bold">chall.py</div>}>
             <CodeSnippet code={SpacePiratesChallenge} />
         </Collapsible>
 
-        <Collapsible className="cc mt-2 p-2 bg-background-faded dark:bg-background-faded-dark rounded-md" header={<div className="text-lg font-bold">msg.enc</div>}>
+        <Collapsible className="tc mt-2 p-2 bg-background-faded dark:bg-background-faded-dark rounded-md" header={<div className="text-lg font-bold">msg.enc</div>}>
             <CodeSnippet code={SpacePiratesEnc}/>
         </Collapsible>
 

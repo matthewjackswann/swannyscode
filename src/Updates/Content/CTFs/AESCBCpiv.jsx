@@ -81,7 +81,7 @@ function Writeup() {
             We are given a server ip address and port to connect to and the servers code:
         </p>
 
-        <Collapsible className="cc mb-4 p-2 bg-background-faded dark:bg-background-faded-dark rounded-md" header={<div className="text-lg font-bold">server.py</div>}>
+        <Collapsible className="tc mb-4 p-2 bg-background-faded dark:bg-background-faded-dark rounded-md" header={<div className="text-lg font-bold">server.py</div>}>
             <CodeSnippet code={AESCBCpivServerCode}/>
         </Collapsible>
 
@@ -93,7 +93,7 @@ function Writeup() {
             Next it's best to look at how AES CBC works and if we can exploit knowing the IV in advance.
         </p>
 
-        <img className="w-full py-2" src="https://upload.wikimedia.org/wikipedia/commons/8/80/CBC_encryption.svg" alt="cbc structure" />
+        <img className="cc w-full my-2 dark:invert border-[1px] border-text" src="https://upload.wikimedia.org/wikipedia/commons/8/80/CBC_encryption.svg" alt="cbc structure" />
 
         <p>
             The IV is a random byte string which is used to help randomise the encryption. If you don't use an IV then the same plaintext will encrypt to the same cyphertext each time, allowing you to guess plaintexts until the cyphertexts match.
@@ -163,7 +163,7 @@ function Writeup() {
             This process can be automated by a script and I've written one in python that can solve this quite fast. Below is the full code.
         </p>
 
-        <Collapsible className="cc p-2 bg-background-faded dark:bg-background-faded-dark rounded-md" header={<div className="text-lg font-bold">server.py</div>}>
+        <Collapsible className="tc p-2 bg-background-faded dark:bg-background-faded-dark rounded-md" header={<div className="text-lg font-bold">server.py</div>}>
             <CodeSnippet code={AESCBCpivSolCode}/>
         </Collapsible>
     </div>);

@@ -43,7 +43,7 @@ const Update2 = () => {
             converter so I don't have to try and do that myself. The full code is shown below:
         </p><br />
 
-        <Collapsible className="cc mb-4 p-2 bg-background-faded dark:bg-background-faded-dark rounded-md" header={<div className="text-lg font-bold">CodeFormatter.py</div>}>
+        <Collapsible className="tc mb-4 p-2 bg-background-faded dark:bg-background-faded-dark rounded-md" header={<div className="text-lg font-bold">CodeFormatter.py</div>}>
             <CodeSnippet code={WebsiteCodeFormatterCode} />
         </Collapsible>
 

@@ -138,7 +138,7 @@ function Content() {
             The list of words all 42 settings failed to find are:
         </p>
 
-        <p className="cc bg-background-faded dark:bg-background-faded-dark p-2 my-2 rounded-md">
+        <p className="tc bg-background-faded dark:bg-background-faded-dark p-2 my-2 rounded-md">
             dumps, vibes, pates, loxes, moper, paves, bider, veals, vined, rapes, veeps, vires, wears, razes, tames, vends, sawer, oozes, vests, vails, vales, dills, poxes, zeals, dinks, vapes, wales, fifes, vases, vaunt, finks, waxer, gears, zests, fells, jiber, hinds, heeds, boded, hives, vower, gages, jilts, eases, eaves, jings, kikes, coked, doges, jives, gapes, faxer, faxed, liker, fazes, coxed, coxes, mimes, mimer, jakes, nines, janes, dozes, laker, peats, lases, laxer, lazes, loges, yummy, jowls
         </p>
 

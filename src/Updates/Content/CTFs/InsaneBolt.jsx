@@ -50,7 +50,7 @@ function InsaneBolt() {
             Full code below:
         </p>
 
-        <Collapsible className="cc mb-4 p-2 bg-background-faded dark:bg-background-faded-dark rounded-md" header={<div className="text-lg font-bold">Responder.py</div>}>
+        <Collapsible className="tc mb-4 p-2 bg-background-faded dark:bg-background-faded-dark rounded-md" header={<div className="text-lg font-bold">Responder.py</div>}>
             <CodeSnippet code={InsaneBoltSolCode}/>
         </Collapsible>
 
