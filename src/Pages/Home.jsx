@@ -4,11 +4,14 @@ import { ProjectSummary } from "../Projects/ProjectSummary";
 import { UpdateSummary } from "../Updates/UpdateSummary";
 import { useRef, useState } from "react";
 import SegmentedButton from "../Components/SegmentedButton";
+import EmailIcon from "./Media/email.svg";
+import LinkedinIcon from "./Media/linkedin.svg";
+import GithubIcon from "./Media/github.svg";
 
 const newestProjects = Object.keys(ProjectInfo).sort((a, b) => new Date(ProjectInfo[b].date) - new Date(ProjectInfo[a].date)).slice(0,2);
 const newestUpdates = Object.keys(UpdateInfo).filter(p => !UpdateInfo[p].categories.includes("Project")).sort((a, b) => new Date(UpdateInfo[b].date) - new Date(UpdateInfo[a].date)).slice(0,5);
 const featuredProjects = ["1", "2"];
-const featuredUpdates = ["1"];
+const featuredUpdates = ["6", "5", "4", "2", "7"];
 
 const ProjectsPane = () => {
     let [showNewestProject, setShowNewestProject] = useState(false);
@@ -63,6 +66,14 @@ const UpdatesPane = () => {
     </div>)
 }
 
+const ContactPill = ({href, icon, text}) => {
+
+    return (<a href={href} className="tc grid grid-cols-[.5fr_.75fr] w-40 border-solid border-2 rounded-full px-3 py-2 m-2 hover:bg-accent dark:hover:bg-accent-dark bg-primary-button dark:bg-primary-button-dark">
+        <img className="cc dark:invert mx-auto " src={icon} alt={text} />
+        <div className="m-auto">{text}</div>
+    </a>);
+}
+
 function Home() {    
     return (<div>
         <h1 className="text-4xl pb-2">Home</h1>
@@ -78,6 +89,14 @@ function Home() {
             I also add updates on smaller projects / competitions I've taken part in which I want to remember but I don't want
             to create a writeup about.
         </p>
+
+        <h2 className="font-bold text-2xl pt-4" >Contact me:</h2>
+
+        <div className="sm:flex">
+            <ContactPill icon={EmailIcon} href="mailto:matthewjackswann@outlook.com" text="Email" />
+            <ContactPill icon={LinkedinIcon} href="https://www.linkedin.com/in/matthew-swann-29a262161/" text="Linkedin" />
+            <ContactPill icon={GithubIcon} href="https://github.com/matthewjackswann" text="Github" />
+        </div>
 
         <br />
 
