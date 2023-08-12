@@ -13,7 +13,7 @@ function Collapsible({children, header, className}) {
             divRef.current.classList.remove("grid-rows-[0fr]");
             // todo only scroll if entire div not already in view
             setTimeout(() => {
-                thisRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+                thisRef.current.scrollIntoView({ behavior: "smooth", block: "nearest" });
             }, 100);
         } else {
             divRef.current.classList.add("grid-rows-[0fr]");
