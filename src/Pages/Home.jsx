@@ -32,10 +32,9 @@ const ProjectsPane = () => {
             ]}
         />
 
-        <div className="sm:grid sm:grid-cols-2 sm:gap-3">
-            {showNewestProject && newestProjects.map(id => <ProjectSummary id={id} key={id} projectDetails={ProjectInfo[id]}/>)}
-            {!showNewestProject && featuredProjects.map(id => <ProjectSummary id={id} key={id} projectDetails={ProjectInfo[id]}/>)}
-        </div>
+        {/* Change css to hide so all images are preloaded and flickering is reduced */}
+        <div className={"sm:grid-cols-2 sm:gap-3 " + (showNewestProject ? "hidden": "sm:grid")}>{newestProjects.map(id => <ProjectSummary id={id} key={id} projectDetails={ProjectInfo[id]}/>)}</div>
+        <div className={"sm:grid-cols-2 sm:gap-3 " + (!showNewestProject ? "hidden": "sm:grid")}>{featuredProjects.map(id => <ProjectSummary id={id} key={id} projectDetails={ProjectInfo[id]}/>)}</div>
     </div>)
 };
 

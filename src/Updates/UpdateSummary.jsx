@@ -1,6 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { getCategoryLabel, getContent } from "../Pages/Updates";
+import { getCategoryLabel } from "../Pages/Updates";
+
+const getContent = (path) => {
+    const Component = require(`./${path}.jsx`).default;
+    return (
+        <div key={path}>
+            <Component />
+        </div>
+    );
+}
 
 // creates summary card of an update
 export function UpdateSummary({ id, updateDetails, openFunction, open, filters }) {

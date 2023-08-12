@@ -1,14 +1,11 @@
-import { Suspense } from "react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const getContent = (path) => {
-    const Component = React.lazy(() => import(`../Projects/${path}`));
+    const Component = require(`./${path}.jsx`).default;
     return (
         <div key={path}>
-            <Suspense fallback={<div>Loading...</div>}>
-                <Component />
-            </Suspense>
+            <Component />
         </div>
     );
 }
