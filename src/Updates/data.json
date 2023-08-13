@@ -69,5 +69,12 @@
         "extended": true,
         "date": "December 5, 2021",
         "categories": ["Competition", "CTF", "Extended"]
+    },
+    "11": {
+        "title": "CSS x Boeing Hackathon 2022",
+        "fileName": "Hackathon2022",
+        "extended": false,
+        "date": "February 26, 2022",
+        "categories": ["Competition", "Group Work"]
     }
 }
