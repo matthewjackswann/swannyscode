@@ -10,15 +10,15 @@ const Update3 = () => {
         <br />
 
         <p>
-            I've re-written my entire website to use Tailwind CSS to help with formatting. It's taken me way too long to do but it's no so much easier to add new content to my website as I don't need to worry about lots of CSS classes. There is a lot less inheritance beacuse of this which has made making components look how I want so much easier.
+            I've re-written my entire website to use Tailwind CSS to help with formatting. It's taken me way too long to do but it's now so much easier to add new content to my website as I don't need to worry about lots of CSS classes. There is a lot less inheritance because of this which has made making components look how I want so much easier.
         </p><br />
 
         <p>
-            I've also removed my CTF write up section and replaced it with and Updates page. As the third year of university has been very busy, I've not had much time to compeate in CTFs and instead have done a lot of other random coding competitions. I want to record them somewhere and it made the most sense to change my CTF page into a general updates page.
+            I've also removed my CTF write up section and replaced it with and Updates page. As the third year of university has been very busy, I've not had much time to compete in CTFs and instead have done a lot of other random coding competitions. I want to record them somewhere and it made the most sense to change my CTF page into a general updates page.
         </p><br />
 
         <p>
-            As I've switched to using Tailwind for styling, my current method for code no longer works as well. It was very janky anyway so I've got rid of the old method entirely. I now use <a className="tc underline hover:text-primary-button dark:hover:text-primary-button-dark" href="https://www.npmjs.com/package/react-highlight">react-highlight</a> which is built using <a className="tc underline hover:text-primary-button dark:hover:text-primary-button-dark" href="https://highlightjs.org/">highlight.js</a> and is a much better solution. As they styling is done using css style sheets, I updated my <i>DarkModeToggle</i> component to add the code dark mode sheet to the webpage when toggling, alowing code snippets to update as well.
+            As I've switched to using Tailwind for styling, my current method for code no longer works as well. I'm still using Atom for syntax highlighting but using the raw HTML which is generated the the editor. I include the required styles in my website so the highlighting is identical. This is a lot more robust and easily allows me to change the styles in one place (allowing for different styles in dark and light mode).
         </p>
 
     </div>);
@@ -33,7 +33,7 @@ const Update2 = () => {
 
         <p>
             Previously I was using the following <a className="tc underline hover:text-primary-button dark:hover:text-primary-button-dark" href="https://github.com/googlearchive/code-prettify">script</a> to
-            do code syntax highlighting for me but I realized it's quite old. It's been depricated and don't always work on react pages. I've decided to replace it with
+            do code syntax highlighting for me but I realized it's quite old. It's been deprecated and don't always work on react pages. I've decided to replace it with
             another method of formatting code, using html and css. After some searching I found the atom module <a className="tc underline hover:text-primary-button dark:hover:text-primary-button-dark"href="https://atom.io/packages/copy-with-style">copy-with-style</a> which
             does exactly what I want. Sadly it doesn't work but looking at the pull requests there is a functioning version <a className="tc underline hover:text-primary-button dark:hover:text-primary-button-dark" href="https://github.com/my-codeworks/copy-with-style/pull/16">here</a>.
         </p><br />
