@@ -27,7 +27,7 @@ function Projects() {
     return (<div>
         <h1 className="text-4xl pb-2">My Projects</h1>
         <p>
-            This are a list of projects I have compleated in my own time and for my own enjoyment. They all
+            This are a list of projects I have completed in my own time and for my own enjoyment. They all
             have a writeup, explaining how I solves specific problems, as well as what I have learnt from working
             on them. <br />
             Each project takes a significant amount of time so I finish them quite infrequently (especially when I

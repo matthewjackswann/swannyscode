@@ -64,7 +64,7 @@ function DiscoZoo() {
         <img className="mx-auto max-w-2xl" src={image2} alt="a disco zoo game" />
 
         <p className="pt-2">
-        {`It is always more valuable to catch an animal if you can however, if it's not possible to get any more animals then it's best to aim for empty spaces. These sometimes have coins in them (though very few, so theres no point in aiming for them unless turns < animal squares remaining).`}
+        {`It is always more valuable to catch an animal if you can however, if it's not possible to get any more animals then it's best to aim for empty spaces. These sometimes have coins in them (though very few, so there's no point in aiming for them unless turns < animal squares remaining).`}
         </p>
 
         <p className="pt-2">

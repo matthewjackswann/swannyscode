@@ -137,7 +137,7 @@ function Pipes1() {
         </p>
         
         <p className="pb-2">
-            Here is a flowchart of the sub-image identification proccess
+            Here is a flowchart of the sub-image identification process
         </p>
 
         <img src={pipeProcessorFlowchart} className="mx-auto border-2 boarder-solid cc border-accent dark:border-accent-dark" alt="flowchart of how the pipe preprocessor distinguishes pipes"/>
@@ -192,7 +192,7 @@ function Pipes1() {
                 <span className="font-semibold">isSatisfied()</span> - used to ensure the pipe is included when checking if solved. e.g <i>Sinks</i> should be their target colour and <i>Connectors</i> shouldn't be clear.
             </li>
             <li>
-                <span className="font-semibold">getConnections()</span> - returns the list of directions the pipe is connected to. This is used to check if two neighboring pipes share the same connection (both pipes connected or both pipes disconnected).
+                <span className="font-semibold">getConnections()</span> - returns the list of directions the pipe is connected to. This is used to check if two neighbouring pipes share the same connection (both pipes connected or both pipes disconnected).
             </li>
         </ul>
 
@@ -248,7 +248,7 @@ function Pipes1() {
         <br />
 
         <p>
-            The grid has a method called <i>simulate()</i>. When called this returns true or false depending on whether or not the pipes allow the water to flow correctly between them and sinks are not the wrong colour. To start the simulation the <i>update()</i> method is called on all of the sources. This starts a chain reaction of updating the neighboring pipes until one returns false or all simulate correctly, returning true.
+            The grid has a method called <i>simulate()</i>. When called this returns true or false depending on whether or not the pipes allow the water to flow correctly between them and sinks are not the wrong colour. To start the simulation the <i>update()</i> method is called on all of the sources. This starts a chain reaction of updating the neighbouring pipes until one returns false or all simulate correctly, returning true.
         </p>
 
         <ul className="list-disc pl-8">

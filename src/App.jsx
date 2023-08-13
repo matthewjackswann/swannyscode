@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 
 function App() {
 
-  // for scross to page using # at end of url
+  // for links to page using # at end of url
   useEffect(() => {
     let path = window.location.href.split('#');
     if (path.length > 1) {

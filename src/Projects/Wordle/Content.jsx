@@ -12,7 +12,7 @@ function Content() {
     return (<div>
         <h1 className="text-5xl">Wordle Solver</h1>
 
-        <p className="pb-4">Febuary 12, 2022</p>
+        <p className="pb-4">February 12, 2022</p>
 
         <p className="pb-2">
             The aim of wordle is to guess the word in as few turns as possible. The approach I took was to pick the most probable word and use the results of that to reduce the number of possible words. I also split my solving into two parts, the first to try and gain more information, and the second to try and find the correct word.
@@ -129,7 +129,7 @@ function Content() {
         </p>
 
         <p className="pt-2">
-            First I created a function that automatically plays worlde and fed the result back into the solver. Then it's the simple case of running it on the word list and saving the score. I decided to save the number of turns taken, the number of successfully guessed words and the words which were missed.
+            First I created a function that automatically plays Wordle and fed the result back into the solver. Then it's the simple case of running it on the word list and saving the score. I decided to save the number of turns taken, the number of successfully guessed words and the words which were missed.
         </p>
 
         <ImageSwapper className="p-4 w-full" srcs={[stat1, stat2, stat3]} alt="state across all possible parameters" />

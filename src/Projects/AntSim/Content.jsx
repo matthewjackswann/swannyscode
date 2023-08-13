@@ -200,7 +200,7 @@ function Content() {
             To reduce the number of times a pixel is sampled the blur is run twice, once in the horizontal direction and once in the vertical.
         </p>
 
-        <ImageSwapper srcs={[blur1, blur2]} alt="example of bluring a simple image"/>
+        <ImageSwapper srcs={[blur1, blur2]} alt="example of blurring a simple image"/>
         
         <p>This reduces the number of times the array is accessed so that it's in the order of:</p>
 
@@ -230,7 +230,7 @@ function Content() {
 
         <ul className="list-disc pl-8">
             <li>A blur frequency so that the pheromones don't get blurred every tick</li>
-            <li>A weight so that ants are biased to move in the direction they are currently traveling</li>
+            <li>A weight so that ants are biased to move in the direction they are currently travelling</li>
             <li>A view radius to the ants so that they can see move then one square ahead of them</li>
         </ul>
 
@@ -239,7 +239,7 @@ function Content() {
         </p>
         
         <p className="pt-2">
-            They also don't direct ants when there is a clear path as they have no direction. This leads to the ants not folling the paths so they never get renforced enough to correctly renforce behaviour.
+            They also don't direct ants when there is a clear path as they have no direction. This leads to the ants not following the paths so they never get reinforced enough to correctly reinforce behaviour.
         </p>
 
         <div className="md:flex">
