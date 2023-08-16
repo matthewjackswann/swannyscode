@@ -7,6 +7,7 @@ import UpdateContent from './Updates/UpdateContent';
 import Projects from './Pages/Projects';
 import ProjectContent from './Projects/ProjectContent';
 import { useEffect } from 'react';
+import Footer from './MainComponents/Footer';
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </div>
+        <Footer />
       </BrowserRouter>
     </div>
   );
