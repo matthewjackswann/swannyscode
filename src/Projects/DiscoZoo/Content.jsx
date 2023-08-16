@@ -22,7 +22,7 @@ function DiscoZoo() {
         </p>
         
         <p>
-            The full code is available on <a className="tc underline hover:text-primary-button dark:hover:text-primary-button-dark" href="https://github.com/matthewjackswann/discozoo">github</a>. I'm not massively happy the CSS as I've not really worked out how to make things look good yet.
+            The full code is available on <a className="tc underline hover:text-primary dark:hover:text-primary-dark" href="https://github.com/matthewjackswann/discozoo">github</a>. I'm not massively happy the CSS as I've not really worked out how to make things look good yet.
         </p>
 
         <p className="py-6">
@@ -43,7 +43,7 @@ function DiscoZoo() {
                 ["Calculating Square Expectancy", "squares"],
                 ["Maximizing total score", "maximising"]
             ].map(([label, l]) => <li key={l}>
-                <InPageLink className="tc underline hover:text-primary-button dark:hover:text-primary-button-dark cursor-pointer" to={l}>{label}</InPageLink>
+                <InPageLink className="tc underline hover:text-primary dark:hover:text-primary-dark cursor-pointer" to={l}>{label}</InPageLink>
             </li>)}
         </ul>
 

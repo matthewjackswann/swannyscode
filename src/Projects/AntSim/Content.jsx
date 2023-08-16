@@ -28,7 +28,7 @@ function Content() {
         </p>
 
         <p>
-            For all the source code as well as instructions on how to run this code visit the <a className="tc underline hover:text-primary-button dark:hover:text-primary-button-dark" href="https://github.com/matthewjackswann/AntSim/tree/master">github</a>
+            For all the source code as well as instructions on how to run this code visit the <a className="tc underline hover:text-primary dark:hover:text-primary-dark" href="https://github.com/matthewjackswann/AntSim/tree/master">github</a>
         </p>
         <p className="pb-4">It has been built and tested on Linux Ubuntu 20.04.3 with GTK 3.24.20</p>
 
@@ -51,7 +51,7 @@ function Content() {
                 ["Pheromone Diffusing", "diffusing"],
                 ["Criticisms", "criticisms"],
             ].map(([label, l]) => <li key={l}>
-                <InPageLink className="tc underline hover:text-primary-button dark:hover:text-primary-button-dark cursor-pointer" to={l}>{label}</InPageLink>
+                <InPageLink className="tc underline hover:text-primary dark:hover:text-primary-dark cursor-pointer" to={l}>{label}</InPageLink>
             </li>)}
         </ul>
 

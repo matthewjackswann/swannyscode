@@ -5,16 +5,15 @@ export const content = [
 export const theme = {
   extend: {},
   colors: {
-    'text': '#20131d',
-    'background': '#f1e9ef',
-    'primary-button': '#8a985d',
-    'secondary-button': '#fbf9fb',
-    'accent': '#365159',
-    'background-faded': '#f2f2f2',
+    'text': '#0b1009',
+    'background': '#F1EFF6',
+    'primary': '#5e2071',
+    'secondary': '#b1b1c1',
+    'accent': '#20714d',
+    'background-faded': '#E7E6EB',
     'text-dark': '#fbfefd',
     'background-dark': '#040b09',
-    'primary-button-dark': '#55a8c3',
-    'secondary-button-dark': '#0d1326',
+    'primary-dark': '#55a8c3',
     'accent-dark': '#5571c3',
     'background-faded-dark': '#0d1c18',
   }

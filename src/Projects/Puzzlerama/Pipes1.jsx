@@ -44,7 +44,7 @@ function Pipes1() {
                         ["Simulating Flow", "pipes1Simulation"],
                         ["Entering the correct answer", "pipes1Instructions"]
                     ].map(([label, l]) => <li key={l}>
-                        <InPageLink className="tc underline hover:text-primary-button dark:hover:text-primary-button-dark cursor-pointer" to={l}>{label}</InPageLink>
+                        <InPageLink className="tc underline hover:text-primary dark:hover:text-primary-dark cursor-pointer" to={l}>{label}</InPageLink>
                     </li>)}
                 </ul>                    
             </div>

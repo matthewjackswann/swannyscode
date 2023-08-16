@@ -78,7 +78,7 @@ function Updates() {
             {Object.keys(categoryColours).map(c => getFilterLabel(c, filters, setFilters))}
             <br />
 
-            <select className="px-2 bg-accent dark:bg-accent-dark text-secondary-button dark:text-secondary-button-dark rounded-xl float-right cursor-pointer" style={{"WebkitAppearance": "none"}}
+            <select className="px-2 bg-accent dark:bg-accent-dark text-background dark:text-background-dark rounded-xl float-right cursor-pointer" style={{"WebkitAppearance": "none"}}
             onChange={(e) => sortOptions[e.target.value][1]()}>
                 {sortOptions.map(([label, _], i) => <option key={i} value={i}>{label}</option>)}
             </select>

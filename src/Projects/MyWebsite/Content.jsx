@@ -32,10 +32,10 @@ const Update2 = () => {
         <br />
 
         <p>
-            Previously I was using the following <a className="tc underline hover:text-primary-button dark:hover:text-primary-button-dark" href="https://github.com/googlearchive/code-prettify">script</a> to
+            Previously I was using the following <a className="tc underline hover:text-primary dark:hover:text-primary-dark" href="https://github.com/googlearchive/code-prettify">script</a> to
             do code syntax highlighting for me but I realized it's quite old. It's been deprecated and don't always work on react pages. I've decided to replace it with
-            another method of formatting code, using html and css. After some searching I found the atom module <a className="tc underline hover:text-primary-button dark:hover:text-primary-button-dark"href="https://atom.io/packages/copy-with-style">copy-with-style</a> which
-            does exactly what I want. Sadly it doesn't work but looking at the pull requests there is a functioning version <a className="tc underline hover:text-primary-button dark:hover:text-primary-button-dark" href="https://github.com/my-codeworks/copy-with-style/pull/16">here</a>.
+            another method of formatting code, using html and css. After some searching I found the atom module <a className="tc underline hover:text-primary dark:hover:text-primary-dark"href="https://atom.io/packages/copy-with-style">copy-with-style</a> which
+            does exactly what I want. Sadly it doesn't work but looking at the pull requests there is a functioning version <a className="tc underline hover:text-primary dark:hover:text-primary-dark" href="https://github.com/my-codeworks/copy-with-style/pull/16">here</a>.
         </p><br />
         <p>
             Next I created a script to remove the background and convert the HTML to JSX, the form that react webpages
@@ -51,7 +51,7 @@ const Update2 = () => {
             I also modified the code-with-style package further so it runs a custom python script on completion,
             switches themes for you automatically (these are hardcoded sadly), and encoding so that <b>/</b> and other 
             special characters don't break the html output. My modified
-            fork can be found <a className="tc underline hover:text-primary-button dark:hover:text-primary-button-dark" href="https://github.com/matthewjackswann/copy-with-style">here</a>.
+            fork can be found <a className="tc underline hover:text-primary dark:hover:text-primary-dark" href="https://github.com/matthewjackswann/copy-with-style">here</a>.
         </p>
     </div>);
 }

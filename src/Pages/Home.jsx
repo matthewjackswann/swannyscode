@@ -67,7 +67,7 @@ const UpdatesPane = () => {
 
 const ContactPill = ({href, icon, text}) => {
 
-    return (<a href={href} className="tc grid grid-cols-[.5fr_.75fr] w-40 border-solid border-2 rounded-full px-3 py-2 m-2 hover:bg-accent dark:hover:bg-accent-dark bg-primary-button dark:bg-primary-button-dark">
+    return (<a href={href} className="tc grid grid-cols-[.5fr_.75fr] w-40 border-solid border-2 rounded-full px-3 py-2 m-2 hover:bg-accent dark:hover:bg-accent-dark bg-secondary dark:bg-secondary-dark">
         <img className="cc dark:invert mx-auto " src={icon} alt={text} />
         <div className="m-auto">{text}</div>
     </a>);

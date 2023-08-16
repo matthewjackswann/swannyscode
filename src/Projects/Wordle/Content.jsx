@@ -19,11 +19,11 @@ function Content() {
         </p>
 
         <p>
-            The full code is available on <a className="tc underline hover:text-primary-button dark:hover:text-primary-button-dark" href="https://github.com/matthewjackswann/wordle">github</a>
+            The full code is available on <a className="tc underline hover:text-primary dark:hover:text-primary-dark" href="https://github.com/matthewjackswann/wordle">github</a>
         </p>
 
         <p>
-            The word list I used for testing is also on <a className="tc underline hover:text-primary-button dark:hover:text-primary-button-dark" href="https://github.com/charlesreid1/five-letter-words/blob/master/sgb-words.txt">github</a>
+            The word list I used for testing is also on <a className="tc underline hover:text-primary dark:hover:text-primary-dark" href="https://github.com/charlesreid1/five-letter-words/blob/master/sgb-words.txt">github</a>
         </p>
 
         <p className="pt-6">
@@ -37,7 +37,7 @@ function Content() {
                 ["Expanding Character Information", "expanding"],
                 ["Limitations", "limitations"]
             ].map(([label, l]) => <li key={l}>
-                <InPageLink className="tc underline hover:text-primary-button dark:hover:text-primary-button-dark cursor-pointer" to={l}>{label}</InPageLink>
+                <InPageLink className="tc underline hover:text-primary dark:hover:text-primary-dark cursor-pointer" to={l}>{label}</InPageLink>
             </li>)}
         </ul>
 
@@ -152,7 +152,7 @@ function Content() {
         <br />
 
         <p>
-            As I decided to try and find the most likely word from the list, when a guess is incorrect the reduction remaining options can vary massively. This isn't the greatest approach as the program would be more consistent if it picked words which in the worst case still reduced the number of possible words the most. After finishing this project I saw multiple <a className="tc underline hover:text-primary-button dark:hover:text-primary-button-dark" href="https://www.youtube.com/watch?v=fRed0Xmc2Wg">youtube</a> videos doing this and doing considerably better then me.
+            As I decided to try and find the most likely word from the list, when a guess is incorrect the reduction remaining options can vary massively. This isn't the greatest approach as the program would be more consistent if it picked words which in the worst case still reduced the number of possible words the most. After finishing this project I saw multiple <a className="tc underline hover:text-primary dark:hover:text-primary-dark" href="https://www.youtube.com/watch?v=fRed0Xmc2Wg">youtube</a> videos doing this and doing considerably better then me.
         </p>
 
     </div>);

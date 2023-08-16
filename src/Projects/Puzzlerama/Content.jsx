@@ -13,7 +13,7 @@ function Puzzlerama() {
             Currently I only have a solver for pipes 1 but I might come back and create some more when I run out of other projects to work on (though this isn't that likely)
         </p>
         <p className="pb-2">
-            All the source code is linked on <a className="tc underline hover:text-primary-button dark:hover:text-primary-button-dark" href="https://github.com/matthewjackswann/puzzlerama">github</a>
+            All the source code is linked on <a className="tc underline hover:text-primary dark:hover:text-primary-dark" href="https://github.com/matthewjackswann/puzzlerama">github</a>
         </p>
 
         <br /><hr /><br />

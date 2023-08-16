@@ -3,9 +3,9 @@ import DarkModeToggle from './DarkModeToggle';
 
 function MenuBar() {
     return (
-        <div className='items-center p-5 mx-2 mb-2 lg:flex border-solid border-b border-primary-button dark:border-primary-button-dark'>
+        <div className='items-center p-5 mx-2 mb-2 lg:flex border-solid border-b border-accent dark:border-accent-dark'>
             <Link to="/">
-                <h1 className='text-4xl font-bold text-accent dark:text-accent-dark flex items-center'>
+                <h1 className='text-4xl font-bold text-[#f1356d] flex items-center'>
                     Swanny's <br className='sm:hidden'/> Code
                     <img src='/logo192.png' alt='website logo' className='inline align-middle pl-3 h-24 sm:h-12'/>
                 </h1>

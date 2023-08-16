@@ -52,7 +52,7 @@ const SegmentedButton = ({segments, callback, defaultIndex = 0, controlRef}) => 
         <div className={`
             segmented-button-${componentReady.current ? "ready" : "" /* only animated once the component has loaded */}
             shadow-2xl justify-between sm:inline-flex
-            bg-primary-button border-[1px]  dark:bg-primary-button-dark
+            bg-secondary border-[1px]  dark:bg-secondary-dark
             p-1 m-auto relative overflow-hidden rounded-3xl sm:rounded-[10rem]
             before:w-[length:var(--highlight-width)] before:translate-x-[length:var(--highlight-x-pos)]
             before:h-[length:var(--highlight-height)] before:translate-y-[length:var(--highlight-y-pos)]
@@ -70,7 +70,7 @@ const SegmentedButton = ({segments, callback, defaultIndex = 0, controlRef}) => 
                     />
                     <label htmlFor={item.label} className={`
                         cursor-pointer block font-bold p-3 transition-colors duration-500 whitespace-pre-wrap sm:whitespace-normal
-                        ${i === activeIndex ? "text-secondary-button dark:text-secondary-button-dark cc" : "tc"}
+                        ${i === activeIndex ? "text-background dark:text-background-dark cc" : "tc"}
                     `}>
                         {item.label}
                     </label>
