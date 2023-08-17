@@ -6,16 +6,17 @@ export const theme = {
   extend: {},
   colors: {
     'text': '#0b1009',
-    'background': '#F1EFF6',
+    'background': '#f6eff5',
     'primary': '#5e2071',
     'secondary': '#b1b1c1',
     'accent': '#20714d',
     'background-faded': '#E7E6EB',
-    'text-dark': '#fbfefd',
-    'background-dark': '#040b09',
-    'primary-dark': '#55a8c3',
-    'accent-dark': '#5571c3',
-    'background-faded-dark': '#0d1c18',
+    'text-dark': '#F1EFF6', //https://realtimecolors.com/?colors=F1EFF6-0b1009-5e2071-020203-5ad09b
+    'background-dark': '#0a0910',
+    'primary-dark': '#5e2071',
+    'secondary-dark': '#1c1c2a',
+    'accent-dark': '#35ba7e',
+    'background-faded-dark': '#151215',
   }
 };
 export const plugins = [];

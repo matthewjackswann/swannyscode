@@ -24,8 +24,8 @@ const categoryColours = {
 
 export const getCategoryLabel = (category, filters) => {
     const pillStyle = filters.has(category) || filters.size === 0 ?
-        {"color": categoryColours[category], "backgroundColor": categoryColours[category] + "70"} :
-        {"color": categoryColours[category] + "80", "backgroundColor": categoryColours[category] + "50"};
+        {"color": categoryColours[category], "backgroundColor": categoryColours[category] + "90"} :
+        {"color": categoryColours[category] + "80", "backgroundColor": categoryColours[category] + "70"};
 
     return (<div key={category} className="inline-block rounded-full px-2 mr-1 align-super text-lg" style={pillStyle}>
         {category}
@@ -34,7 +34,7 @@ export const getCategoryLabel = (category, filters) => {
 
 const getFilterLabel = (category, filters, setFilters) => {
     const pillStyle = filters.has(category) ?
-        {"color": categoryColours[category], "backgroundColor": categoryColours[category] + "70"} :
+        {"color": categoryColours[category], "backgroundColor": categoryColours[category] + "90"} :
         {"color": "#818589", "backgroundColor": "#81858970"};
 
     const onFilterClick = () => {
