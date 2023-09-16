@@ -17,11 +17,16 @@
     "4": {
         "title": "Wordle Solver",
         "folder": "Wordle",
-        "date": "Febuary 12, 2022"
+        "date": "February 12, 2022"
     },
     "5": {
         "title": "My Website",
         "folder": "MyWebsite",
         "date": "June 29, 2021"
+    },
+    "6": {
+        "title": "Rubik's Cube Solver",
+        "folder": "Rubiks",
+        "date": "September 16, 2023"
     }
 }
