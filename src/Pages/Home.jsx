@@ -14,27 +14,27 @@ const featuredProjects = ["1", "2"];
 const featuredUpdates = ["6", "5", "4", "2", "7"];
 
 const ProjectsPane = () => {
-    let [showNewestProject, setShowNewestProject] = useState(false);
+    let [showNewestProject, setShowNewestProject] = useState(true);
 
     return (<div>
         <SegmentedButton controlRef={useRef()}
             segments={[
                 {
-                    label: 'Featured Projects',
-                    callback: () => setShowNewestProject(false),
+                    label: 'Newest Projects',
+                    callback: () => setShowNewestProject(true),
                     ref: useRef(),
                 },
                 {
-                    label: 'Newest Projects',
-                    callback: () => setShowNewestProject(true),
+                    label: 'Featured Projects',
+                    callback: () => setShowNewestProject(false),
                     ref: useRef(),
                 }
             ]}
         />
 
         {/* Change css to hide so all images are preloaded and flickering is reduced */}
-        <div className={"sm:grid-cols-2 sm:gap-3 " + (showNewestProject ? "hidden": "sm:grid")}>{newestProjects.map(id => <ProjectSummary id={id} key={id} projectDetails={ProjectInfo[id]}/>)}</div>
-        <div className={"sm:grid-cols-2 sm:gap-3 " + (!showNewestProject ? "hidden": "sm:grid")}>{featuredProjects.map(id => <ProjectSummary id={id} key={id} projectDetails={ProjectInfo[id]}/>)}</div>
+        <div className={"sm:grid-cols-2 sm:gap-3 " + (!showNewestProject ? "hidden": "sm:grid")}>{newestProjects.map(id => <ProjectSummary id={id} key={id} projectDetails={ProjectInfo[id]}/>)}</div>
+        <div className={"sm:grid-cols-2 sm:gap-3 " + (showNewestProject ? "hidden": "sm:grid")}>{featuredProjects.map(id => <ProjectSummary id={id} key={id} projectDetails={ProjectInfo[id]}/>)}</div>
     </div>)
 };
 
