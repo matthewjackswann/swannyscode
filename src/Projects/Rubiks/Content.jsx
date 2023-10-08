@@ -2,14 +2,19 @@ import InPageLink from "../../Components/InPageLink";
 import Latex from "react-latex-next";
 import fsm from "./Media/fsm.png";
 import fsmDFS from "./Media/fsmDfs.gif";
-import solveProgression from "./Media/solve-progression.png"
-import solveProgressionDark from "./Media/solve-progression-dark.png"
+import solveProgression from "./Media/solve-progression.png";
+import solveProgressionDark from "./Media/solve-progression-dark.png";
 import cubeGenerator from "./Media/cube-generator.png";
 import cubeGeneratorDark from "./Media/cube-generator-dark.png";
 import generatorGraph from "./Media/generator_graph.png";
 import generatorGraphDark from "./Media/generator_graph_dark.png";
 import { TransformCode } from "./Media/code";
 import CodeSnippet from "../../Components/CodeSnippet";
+import solveGif from "./Media/cubeSolve.gif";
+import solveDiagram from "./Media/solve.png";
+import solveDiagramDark from "./Media/solve_dark.png";
+import cubeTimes from "./Media/times.png";
+import cubeTimesDark from "./Media/times-dark.png";
 
 function Rubiks() {
 
@@ -27,7 +32,7 @@ function Rubiks() {
         </p>
 
         <p className="pb-4">
-            Both implementations use a database to cubes a few moves away from being solved, making it easy to solve a cube once it's within 6 turns of a solution. This project is greatly improved, making it more time and space efficient than the original. 
+            Both implementations use a database of cubes a few moves away from being solved, making it easy to solve a cube once it's within 10 turns of a solution (upgraded from the original 6). This project is greatly improved, making it more time and space efficient than the original. 
         </p>
 
         <p className="pb-2">
@@ -35,11 +40,11 @@ function Rubiks() {
         </p>
 
         <p className="pb-2">
-            The full code is available on github <span className="text-[red]">todo link</span>. It's still work in progress as none of the usual (by hand) algorithms are implemented, but I'm planning on adding them in the future.
+            The full code is available on <a className="tc underline hover:text-primary dark:hover:text-primary-dark" href="https://github.com/matthewjackswann/RubiksSolver/">github</a>. It's still work in progress as none of the usual (by hand) algorithms are implemented, but I'm planning on adding them in the future.
         </p>
 
         <p className="pb-2">
-            A lot of the transforms and graphs were calculated by hand in a <span className="text-[red]">google sheets</span>.
+            A lot of the transforms and graphs were calculated by hand in a <a className="tc underline hover:text-primary dark:hover:text-primary-dark" href="https://docs.google.com/spreadsheets/d/1MZ4lXfJWpFFD4Hl8xaFAn7WSgMnQ4TrK2K6O68myZe4/edit?usp=sharing">google sheets</a>
         </p>
 
         <ul className="list-disc pl-8">
@@ -60,7 +65,7 @@ function Rubiks() {
         <h2 className="text-4xl" id="presolve">Motivation to pre-solve cubes</h2>
         <br />
         <p>
-            When solving a Rubik's cube it is easy to tell when it's solved. Each face is made up entirely of the same colour. It's also fairly easy to see when the cube is one or even two turns away from being solved. By saving cubes and their solutions in some form of lookup table, given a cube <span className="text-[red]">n</span> moves away from being solved, we can jump straight to the most efficient solution.
+            When solving a Rubik's cube it is easy to tell when it's solved. Each face is made up entirely of the same colour. It's also fairly easy to see when the cube is one or even two turns away from being solved. By saving cubes and their solutions in some form of lookup table, given a cube 10 turns away from being solved, we can jump straight to the most efficient solution.
         </p>
         <p className="pt-3">
             Standard Rubik's cube solving algorithms work by reducing the number of turns the cube is away from being solved <b>on average</b>. By pre-solving cubes, we can treat cubes <b>n</b> moves away from being solved as effectively solved (since we can just look up the solution very fast). This could potentially lead to a large reduction in the number of turns required.
@@ -104,7 +109,7 @@ function Rubiks() {
 
         <h4 className="text-2xl font-bold pb-2 pt-4">Compression</h4>
         <p>
-            It would be inefficient to save this list of 54 numbers as is, so they are compressed into a smaller 128-bit number.
+            It would be inefficient to save this list of 54 numbers as is, so they are compressed into a smaller, 128-bit number.
         </p>
         <p>
             Due to how we colour each face, we no longer need the colour of each center face. This means we only need to encode the list of 48 numbers. This is done by treating the list as a 48 character long base 6 number.
@@ -124,15 +129,15 @@ function Rubiks() {
         <h2 className="text-4xl" id="generation">Generating the cubes</h2>
         <br />
         <p>
-            Cubes are generated by transforming a solved cube, calculating the mapping to its rotation, and then reversing the resultant transform. This is then saved to the database along with the ID. If an ID is in the database then the solution is saved and can be directly applied to solve a cube. The transforms 
+            Cubes are generated by transforming a solved cube, calculating the mapping to its rotation, and then reversing the resultant transform. This is then saved to the database along with the ID. When solving a cube, if its ID is in the database then the solution is saved and can be directly applied to solve the cube.
         </p>
         <img className="mx-auto w-full max-w-3xl p-4 rounded-md dark:hidden" alt="img of cubes being transformed into id state for saving to the database" src={cubeGenerator}/>
         <img className="mx-auto w-full max-w-3xl p-4 rounded-md hidden dark:block" alt="img of cubes being transformed into id state for saving to the database" src={cubeGeneratorDark}/>
         <p>
-            When pre-solving cubes we want to skip over cubes who's IDs are already in the database. This is the largest improvement I've made in comparison to my old version. By only sending cubes which we know are likely not in the table already we save a lot of time during generation (6 million cubes can be generated in {/* todo record approx time */} rather then taking a day <span className="text-sm">(though this isn't the only optimisation)</span>).
+            When pre-solving cubes we want to skip over cubes who's IDs are already in the database. This is the largest improvement I've made in comparison to my old version. By only sending cubes which we know are likely not in the table already we save a lot of time during generation (6 million cubes can be generated in 7min30 rather then taking a day <span className="text-sm">(though this isn't the only optimisation)</span>).
         </p>
         <p>
-            A set of transforms are reducible if they can be replaced with another smaller or equal set of transforms, and when applied to a cube result in the same ID. We want to reduce the number of reducible transforms considered as much as possible. They take time to process and are guaranteed to generate an ID which is already in the database.
+            A set of transforms are reducible if they can be replaced with another, smaller or equal, set of transforms which when applied to a cube result in the same ID. We want to reduce the number of reducible transforms considered as much as possible. They take time to process and are guaranteed to generate an ID which is already in the database.
         </p>
         <p className="pt-3">
             Originally, I generated the transforms to apply to a solved cube by encoding numbers (base 12 with each digit representing a different transform). This allows the next transform to be generated by simply adding 1 to the transform number. I then checked these against a regex which checked there were not reductions that could be made (<b>FfR</b> can be simplified to <b>R</b>). This worked well but could lead to long periods of time where the transforms were all reducible. (<b>Ff</b>RlUdRlUd is reducible and the next valid transform is <Latex>{`$\\approx 13^{8}$`}</Latex> transforms away). The regex I used was also missing some key simple cases which reduce the number of valid cubes further.
@@ -191,22 +196,32 @@ function Rubiks() {
         <h2 className="text-4xl" id="middle">Meet in the middle solving</h2>
         <br />
         <p>
-            Part way through this project I learnt about meet in the middle attacks used in cryptography. I decided to use this trick to solve the cube fully in the smallest number of transforms required. This can be pretty slow, but it ensures the generated solution cannot be any smaller.
+            Part way through this project I learnt about meet in the middle attacks used in cryptography. I decided to use this trick to solve the cube fully in the smallest number of transforms required. This can be pretty slow, but it ensures that any generated solution is optimal.
         </p>
-        <p>
-            {/* todo meet in the middle explanation */}
+        <img className="mx-auto w-full max-w-xl border-solid border-[white] border-8 m-3 dark:invert" src="https://www.yaldex.com/games-programming/FILES/12fig26.gif" alt="example of meet in the middle on a graph"/>
+        <p className="text-center">Meet in the middle on a graph <a className="tc underline hover:text-primary dark:hover:text-primary-dark" href="https://www.yaldex.com/games-programming/0672323699_ch12lev1sec7.html">[Source]</a></p>
+        <p className="pt-3">
+            By exploring cubes a short number of moves away from the cube that needs solving, if there is any overlap with the ID database, then we can create a optimal solution. This is done by generating transforms in increasing size (near identically to how they are made in Generating the cubes) and applying them to our cube. These cube IDs are then looked up in the database and if they exist we can stop searching and solve the cube.
         </p>
-        {/* todo cube solution transform graph cube -> id -> transform -> id -> lookup -> transform... */}
+        <p className="pt-3">
+            For generating the transforms the cube is first checked for rotational symmetry. If it has high rotational symmetry then not all transforms need to be considered. The same generator as the one used for creating cube Ids, is used to create partial transforms, and it's applied to each of the non-symmetrical rotations. If there is low rotational symmetry then a different FSM is used, where the first transform can be any possible transform. <span className="text-sm">(This is similar to why I use a different FSM when creating cube IDs. The solved cube has full rotational symmetry so it's less efficient to use all possible transforms.)</span>
+        </p>
+
+        <img className="mx-auto w-full max-w-5xl p-4 rounded-md dark:hidden" src={solveDiagram} alt="graph of solve distance against solve progression"/>
+        <img className="mx-auto w-full max-w-5xl p-4 rounded-md hidden dark:block" src={solveDiagramDark} alt="graph of solve distance against solve progression"/>
+        <p className="text-center">
+            Diagram of a solve being run on a cube with 3 non-identical orientations. T is sampled until one of the cube IDs has a successful lookup.
+        </p>
 
         <br />
 
         <h2 className="text-4xl" id="webapp">Webapp</h2>
         <br />
         <p>
-            I created a react frontend which can be used to apply transforms and solve the cube minimally. Requests are sent from the frontend describing the cube and the required operation, these are then fulfilled and the resultant cube is sent back.
+            I created a react frontend which can be used to apply transforms and solve the cube minimally. Requests are sent from the frontend describing the cube and the required operation, these are then fulfilled and the resultant cube is sent back. Here is a gif of a cube being solved, and the required transforms being applied to to the cube:
         </p>
 
-        {/* todo video of frontend + solve */}
+        <img src={solveGif} className="mx-auto w-full max-w-4xl my-3" alt="gif of a cube being solved in the frontend" />
 
         <br />
 
@@ -219,15 +234,25 @@ function Rubiks() {
 
         <ul className="list-disc pl-8">
             <li>    
-                I can generate all cubes <span className="text-[red]">n</span> moves away from being solved in <span className="text-[red]">n</span> seconds.
+                I can generate all cubes 6 moves away from being solved in ~5.5 seconds.
             </li>
             <li>
-                In a 1TB hard drive, I can store <span className="text-[red]">n</span> different cube IDs (generated from <span className="text-[red]">n</span> proposed transforms) and <span className="text-[red]">n</span> lookups can be performed per second.
+                In a 20GB sqlite file, I can store 320,000,000 different cube IDs and ~20,200 lookups can be performed per second.
             </li>
             <li>
-                A cube with an optimal solution of size 20 (the largest possible according to gods number) takes <span className="text-[red]">n</span> to solve.
+                From 1,394,992,004 proposed cube IDs, 312,757,571 are unique, giving an approximate 22.4% unique cube ID generation rate. I think this could be improved by removing rotationally symmetrical transforms from the generator (<Latex>{`$\\text{DFU} = \\text{DRU} = \\text{DBU} = \\text{DLU}$`}</Latex>).
+            </li>
+            <li>
+                A cube with an optimal solution of size 20 (when counting only quarter turns the largest possible is 24, according to gods number) takes under 11hrs to solve.
             </li>
         </ul>
+
+        <img className="mx-auto w-full max-w-3xl p-4 rounded-md dark:hidden" alt="img of cubes being transformed into id state for saving to the database" src={cubeTimes}/>
+        <img className="mx-auto w-full max-w-3xl p-4 rounded-md hidden dark:block" alt="img of cubes being transformed into id state for saving to the database" src={cubeTimesDark}/>
+
+        <p className="pt-4">
+            I'm pretty happy with this as the aim wasn't to solve any cube fast, but to be able to solve any cube optimally. Given enough time it will solve any cube optimally but I don't want to spend a week precomputing to test it on a 24 move cube.
+        </p>
 
         <p className="pt-4">There are a few things I'd like to change but don't really have the motivation to:</p>
         <ul className="list-disc pl-8">
@@ -236,6 +261,9 @@ function Rubiks() {
             </li>
             <li>    
                 It would be fun to try different databases to see if they were any more performant. Once all the cubes are pre-processed you could convert it to readonly and after a long restructure have a much faster lookup time (maybe).
+            </li>
+            <li>
+                I think it would be fun to animate the front end so that you can see the sides actually rotating. I might do this when I'm next working on the project, but for the amount of effort it's likely to take, I'm not too keen on doing it just yet.
             </li>
         </ul>
 
