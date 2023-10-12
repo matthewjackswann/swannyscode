@@ -24,7 +24,7 @@ function Rubiks() {
         <p className="pb-4">September 16, 2023</p>
 
         <p className="pb-2">
-            Part of a Rubik's cube solver I've been working on. It uses a meet in the middle style to solving the cube in the minimal number of moves.
+            Part of a Rubik's cube solver I've been working on. It uses a meet in the middle style to solve the cube in the minimum number of moves.
         </p>
 
         <p>
@@ -36,7 +36,7 @@ function Rubiks() {
         </p>
 
         <p className="pb-2">
-            The original motivation to create this implementation in Go, was for the easy to implement multi-threading. The plan was to implement several different solving algorithms and run them all in parallel, picking only the algorithm with the shortest number moves. Midway through development I started using a meet in the middle style solving method with is very slow but always produces a optimal solution. I plan on adding other solving methods (CFOP, Petrus, ZZ, Roux) in the future, but the work done so far is more than enough for a write up. This has made the parallel parts of the code pretty useless (as it's limited by the database) so I should have just skipped them entirely.
+            The original motivation to create this implementation in Go, was for the easy to implement multi-threading. The plan was to implement several different solving algorithms and run them all in parallel, picking only the algorithm with the shortest number of moves. Midway through development I started using a meet in the middle style solving method with is very slow but always produces an optimal solution. I plan on adding other solving methods (CFOP, Petrus, ZZ, Roux) in the future, but the work done so far is more than enough for a write up. This has made the parallel parts of the code pretty useless (as it's limited by the database) so I should have just skipped them entirely.
         </p>
 
         <p className="pb-2">
@@ -94,7 +94,7 @@ function Rubiks() {
             As we want to be able to solve cubes of different colours, each colour is represented by a single number 0-5. This allows any cube to be easily encoded in this form (as long as the colour {"->"} number mapping is consistent).
         </p>
 
-        <h4 className="text-3xl pb-2 pt-6">Cube Ids</h4>
+        <h4 className="text-3xl pb-2 pt-6">Cube IDs</h4>
         <p>
             When saving cubes to the database, we want to store the cube in as little space as possible, allowing more cubes to be stored, and cubes to be solved faster.
         </p>
@@ -112,7 +112,7 @@ function Rubiks() {
             It would be inefficient to save this list of 54 numbers as is, so they are compressed into a smaller, 128-bit number.
         </p>
         <p>
-            Due to how we colour each face, we no longer need the colour of each center face. This means we only need to encode the list of 48 numbers. This is done by treating the list as a 48 character long base 6 number.
+            Due to how we colour each face, we no longer need the colour of each centre face. This means we only need to encode the list of 48 numbers. This is done by treating the list as a 48 character long base 6 number.
         </p>
 
         <Latex>{`
@@ -151,7 +151,7 @@ function Rubiks() {
             <li>Three or more identical transforms next to each other e.g. <Latex>{`$\\text{FFF} = \\text{f}$`}</Latex></li>
         </ul>
         <p className="pt-4">
-                I then expanded to to also cover the following cases. They can't be reduced, but they can be represented in the same number of transforms a different way (so only one needs to be covered):
+                I then expanded it to also cover the following cases. They can't be reduced, but they can be represented in the same number of transforms a different way (so only one needs to be covered):
         </p>
         <ul className="list-disc pl-8">
             <li>Independent transforms being ordered differently e.g. <Latex>{`$\\text{LR} = \\text{RL}$`}</Latex></li>
@@ -175,7 +175,7 @@ function Rubiks() {
         </p>
 
         <p className="pt-4">
-            Rather then following edges given a string to check, we can follow the edges to generate strings which would be accepted. As they are accepted by the FMS, they must be accepted by the regex, and such must be a valid transform.
+            Rather than following edges given a string to check, we can follow the edges to generate strings which would be accepted. As they are accepted by the FMS, they must be accepted by the regex, and so must be a valid transform.
         </p>
 
         <p>
@@ -185,7 +185,7 @@ function Rubiks() {
         <img className="w-full max-w-3xl my-4 mx-auto dark:invert" src={fsmDFS} alt="graph of a fsm"/>
 
         <p>
-            Due to the nature of the regex I'm using, strings can be infinity extended. This means that walks in the graph can be infinity extended as well and IDFS will never reach a dead end. Below is the graph used to generate the transforms:
+            Due to the nature of the regex I'm using, strings can be infinitely extended. This means that walks in the graph can be infinitely extended as well and IDFS will never reach a dead end. Below is the graph used to generate the transforms:
         </p>
 
         <img className="mx-auto w-full max-w-5xl p-4 rounded-md dark:hidden" src={generatorGraph} alt="graph of solve distance against solve progression"/>
@@ -201,7 +201,7 @@ function Rubiks() {
         <img className="mx-auto w-full max-w-xl border-solid border-[white] border-8 m-3 dark:invert" src="https://www.yaldex.com/games-programming/FILES/12fig26.gif" alt="example of meet in the middle on a graph"/>
         <p className="text-center">Meet in the middle on a graph <a className="tc underline hover:text-primary dark:hover:text-primary-dark" href="https://www.yaldex.com/games-programming/0672323699_ch12lev1sec7.html">[Source]</a></p>
         <p className="pt-3">
-            By exploring cubes a short number of moves away from the cube that needs solving, if there is any overlap with the ID database, then we can create a optimal solution. This is done by generating transforms in increasing size (near identically to how they are made in Generating the cubes) and applying them to our cube. These cube IDs are then looked up in the database and if they exist we can stop searching and solve the cube.
+            By exploring cubes a short number of moves away from the cube that needs solving, if there is any overlap with the ID database, then we can create an optimal solution. This is done by generating transforms in increasing size (near identically to how they are made in Generating the cubes) and applying them to our cube. These cube IDs are then looked up in the database and if they exist we can stop searching and solve the cube.
         </p>
         <p className="pt-3">
             For generating the transforms the cube is first checked for rotational symmetry. If it has high rotational symmetry then not all transforms need to be considered. The same generator as the one used for creating cube Ids, is used to create partial transforms, and it's applied to each of the non-symmetrical rotations. If there is low rotational symmetry then a different FSM is used, where the first transform can be any possible transform. <span className="text-sm">(This is similar to why I use a different FSM when creating cube IDs. The solved cube has full rotational symmetry so it's less efficient to use all possible transforms.)</span>
@@ -229,7 +229,7 @@ function Rubiks() {
         <br />
 
         <p className="pb-3">
-            I'm very happy with this implementation and how much it's improved on the original version. It's one of my first projects I've done test-driven and it made it so much easier. With all the weird transformation maps, rotations and hardcoded value it would have been almost impossible to debug without the tests.
+            I'm very happy with this implementation and how much it's improved on the original version. It's one of my first projects that has been test-driven and it made it so much easier. With all the weird transformation maps, rotations and hardcoded values, it would have been almost impossible to debug without the tests.
         </p>
 
         <ul className="list-disc pl-8">
@@ -243,7 +243,7 @@ function Rubiks() {
                 From 1,394,992,004 proposed cube IDs, 312,757,571 are unique, giving an approximate 22.4% unique cube ID generation rate. I think this could be improved by removing rotationally symmetrical transforms from the generator (<Latex>{`$\\text{DFU} = \\text{DRU} = \\text{DBU} = \\text{DLU}$`}</Latex>).
             </li>
             <li>
-                A cube with an optimal solution of size 20 (when counting only quarter turns the largest possible is 24, according to gods number) takes under 11hrs to solve.
+                A cube with an optimal solution of size 20 (when counting only quarter turns the largest possible is 24, according to God's number) takes under 11hrs to solve.
             </li>
         </ul>
 
@@ -254,7 +254,7 @@ function Rubiks() {
             I'm pretty happy with this as the aim wasn't to solve any cube fast, but to be able to solve any cube optimally. Given enough time it will solve any cube optimally but I don't want to spend a week precomputing to test it on a 24 move cube.
         </p>
 
-        <p className="pt-4">There are a few things I'd like to change but don't really have the motivation to:</p>
+        <p className="pt-4">There are a few things I'd like to change but don't really have the time to at the moment:</p>
         <ul className="list-disc pl-8">
             <li>    
                 A lot of the multithreading stuff doesn't actually make the program any faster due to being slowed by the database access. Ideally I would replace it with a simpler, single threaded implementation but it's not broke so I'm not going to fix it.
