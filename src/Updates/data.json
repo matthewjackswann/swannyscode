@@ -76,5 +76,26 @@
         "extended": false,
         "date": "February 26, 2022",
         "categories": ["Competition", "Group Work"]
+    },
+    "12": {
+        "title": "CSS Game Jam 2023",
+        "fileName": "GameJam2023",
+        "extended": false,
+        "date": "October 29, 2023",
+        "categories": ["Competition", "Group Work"]
+    },
+    "13": {
+        "title": "BAE Systems Capture the Flag",
+        "fileName": "CTFs/BAECTF2024",
+        "extended": false,
+        "date": "February 3, 2024",
+        "categories": ["CTF", "Competition", "Group Work"]
+    },
+    "14": {
+        "title": "CSS BrisHack 2024",
+        "fileName": "BrisHack2024",
+        "extended": false,
+        "date": "February 25, 2024",
+        "categories": ["Competition", "Group Work"]
     }
 }
