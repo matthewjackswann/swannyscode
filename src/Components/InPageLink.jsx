@@ -1,10 +1,10 @@
 function InPageLink({to, className, children}) {
-    return (<div className={className} onClick={() => {
+    return (<span className={className} onClick={() => {
         let hero = document.getElementById(to);
         hero && hero.scrollIntoView({ behavior: "smooth", block: "start" });
     }}>
         {children}
-    </div>)
+    </span>)
 }
 
 export default InPageLink;
