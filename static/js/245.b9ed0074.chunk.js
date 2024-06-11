@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkswannyscode=self.webpackChunkswannyscode||[]).push([[245],{4245:function(s,a,e){s.exports=e.p+"static/media/myNumFaultComparison_2.a1122c090212a0605be1.svg"}}]);

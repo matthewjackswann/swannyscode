@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkswannyscode=self.webpackChunkswannyscode||[]).push([[22],{9022:function(e,s,n){e.exports=n.p+"static/media/oneFault.e7a862526e29d7c63217.svg"}}]);

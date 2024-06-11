@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkswannyscode=self.webpackChunkswannyscode||[]).push([[488],{6488:function(s,e,a){s.exports=a.p+"static/media/wotschains.8afbae8410b93d721543.svg"}}]);

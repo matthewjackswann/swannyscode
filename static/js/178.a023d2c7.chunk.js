@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkswannyscode=self.webpackChunkswannyscode||[]).push([[178],{3178:function(e,s,a){e.exports=a.p+"static/media/markle-tree-1.drawio.078d34eb2ab5cc14b030.svg"}}]);

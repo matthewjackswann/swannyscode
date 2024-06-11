@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkswannyscode=self.webpackChunkswannyscode||[]).push([[867],{8867:function(e,s,a){e.exports=a.p+"static/media/treeGraftSmall.69fac1ba3803935ea1db.svg"}}]);
