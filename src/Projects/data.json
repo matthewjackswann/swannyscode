@@ -28,5 +28,10 @@
         "title": "Rubik's Cube Solver",
         "folder": "Rubiks",
         "date": "September 16, 2023"
+    },
+    "7": {
+        "title": "SPHINCS+ Simulated Fault Injection",
+        "folder": "SphincsPlusFault",
+        "date": "May 16, 2024"
     }
 }
