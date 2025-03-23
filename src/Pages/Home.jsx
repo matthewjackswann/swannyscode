@@ -7,6 +7,7 @@ import SegmentedButton from "../Components/SegmentedButton";
 import EmailIcon from "./Media/email.svg";
 import LinkedinIcon from "./Media/linkedin.svg";
 import GithubIcon from "./Media/github.svg";
+import InternalLink from "../MainComponents/InternalLink";
 
 const newestProjects = Object.keys(ProjectInfo).sort((a, b) => new Date(ProjectInfo[b].date) - new Date(ProjectInfo[a].date)).slice(0,2);
 const newestUpdates = Object.keys(UpdateInfo).filter(p => !UpdateInfo[p].categories.includes("Project")).sort((a, b) => new Date(UpdateInfo[b].date) - new Date(UpdateInfo[a].date)).slice(0,5);
@@ -78,14 +79,14 @@ function Home() {
         <h1 className="text-4xl pb-2">Home</h1>
         <p>
             Welcome to my website
-            I am a fourth year computer science student at the University of Bristol and decided to create this website
-            to show off my projects and work.
+            I'm a junior software engineer working in London. I created this website to show off my projects and work,
+            and so I can remember all the things I've achieved.
         </p>
         <p>
             I create writeups for larger projects I've been working on explaining decisions I've made when solving problems.
         </p>
         <p>
-            I also add updates on smaller projects / competitions I've taken part in which I want to remember but I don't want
+            <InternalLink to="/projects">Projects</InternalLink> I also add updates on smaller projects / competitions I've taken part in which I want to remember but I'm too lazy
             to create a writeup about.
         </p>
 

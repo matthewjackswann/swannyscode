@@ -1,11 +1,11 @@
-import { Link } from 'react-router-dom';
+import InternalLink from '../MainComponents/InternalLink';
 
 function PageNotFound() {
     return (
         <div className='flex justify-center items-center text-center' style={{"minHeight": "50vh"}}>
             <div>
                 <h1 className='text-2xl'>Page Not Found</h1>
-                <p className='text-2xl'>Return to <Link to="/" className='text-primary dark:text-primary-dark hover:text-accent dark:hover:text-accent-dark cc'>Home</Link></p>
+                <p className='text-2xl'>Return to <InternalLink to="/" className='text-primary dark:text-primary-dark hover:text-accent dark:hover:text-accent-dark cc'>Home</InternalLink></p>
             </div>
         </div>
     );
