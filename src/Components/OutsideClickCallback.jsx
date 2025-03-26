@@ -2,6 +2,8 @@ import React, { useRef, useEffect } from "react";
 
 // taken from https://stackoverflow.com/questions/32553158/detect-click-outside-react-component
 
+// todo is this used anywhere?
+
 function useOutsideAlerter(ref, callback) {
   useEffect(() => {
     function handleClickOutside(event) {

@@ -33,5 +33,10 @@
         "title": "SPHINCS+ Simulated Fault Injection",
         "folder": "SphincsPlusFault",
         "date": "May 16, 2024"
+    },
+    "8": {
+        "title": "Mayo Signatures security proof (Dissertation)",
+        "folder": "MayoProof",
+        "date": "May 16, 2034"
     }
 }
