@@ -8,6 +8,7 @@ import Projects from './Pages/Projects';
 import ProjectContent from './Projects/ProjectContent';
 import { useEffect } from 'react';
 import Footer from './MainComponents/Footer';
+import 'react-photo-view/dist/react-photo-view.css';
 
 function App() {
 
