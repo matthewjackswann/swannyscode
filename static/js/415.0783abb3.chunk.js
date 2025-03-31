@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkswannyscode=self.webpackChunkswannyscode||[]).push([[415],{2415:function(s,e,c){s.exports=c.p+"static/media/mayo.f1217832e8cfb194f3c4.svg"}}]);
