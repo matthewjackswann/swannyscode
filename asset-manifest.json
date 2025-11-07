@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.870d00df.css",
-    "main.js": "/static/js/main.24a33b7b.js",
+    "main.css": "/static/css/main.756900ce.css",
+    "main.js": "/static/js/main.e5bf52aa.js",
     "static/js/415.0783abb3.chunk.js": "/static/js/415.0783abb3.chunk.js",
     "static/js/136.588169b2.chunk.js": "/static/js/136.588169b2.chunk.js",
     "static/js/178.a023d2c7.chunk.js": "/static/js/178.a023d2c7.chunk.js",
@@ -33,6 +33,7 @@
     "static/media/example3.png": "/static/media/example3.397fa53724fb27013515.png",
     "static/media/img3.png": "/static/media/img3.dad2d611273251f283ba.png",
     "static/media/diff1.png": "/static/media/diff1.99ac993c7adccdf60b44.png",
+    "static/media/janestreet_baseball.gif": "/static/media/janestreet_baseball.63af6470bfc93e4ea519.gif",
     "static/media/img2.png": "/static/media/img2.9243b9d84bcb7a1d9103.png",
     "static/media/img1.png": "/static/media/img1.6cc2287384fc3612752a.png",
     "static/media/animation3.gif": "/static/media/animation3.7dca871cd0ea842a7356.gif",
@@ -143,11 +144,11 @@
     "static/media/linkedin.svg": "/static/media/linkedin.c6b860b809f83087c800ae63ccc93c6d.svg",
     "static/media/email.svg": "/static/media/email.0b76d4ac49b5ed4617dfac4482bfb4b2.svg",
     "index.html": "/index.html",
-    "main.870d00df.css.map": "/static/css/main.870d00df.css.map",
-    "main.24a33b7b.js.map": "/static/js/main.24a33b7b.js.map"
+    "main.756900ce.css.map": "/static/css/main.756900ce.css.map",
+    "main.e5bf52aa.js.map": "/static/js/main.e5bf52aa.js.map"
   },
   "entrypoints": [
-    "static/css/main.870d00df.css",
-    "static/js/main.24a33b7b.js"
+    "static/css/main.756900ce.css",
+    "static/js/main.e5bf52aa.js"
   ]
 }
