@@ -97,5 +97,12 @@
         "extended": false,
         "date": "February 25, 2024",
         "categories": ["Competition", "Group Work"]
+    },
+    "15": {
+        "title": "Jane Street Baseball",
+        "fileName": "JaneStreetBaseball",
+        "extended": true,
+        "date": "November 2, 2025",
+        "categories": ["Extended"]
     }
 }
