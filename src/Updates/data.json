@@ -99,10 +99,17 @@
         "categories": ["Competition", "Group Work"]
     },
     "15": {
-        "title": "Jane Street Baseball",
-        "fileName": "JaneStreetBaseball",
+        "title": "Jane Street Robot Baseball",
+        "fileName": "JaneStreetRobotBaseball",
         "extended": true,
         "date": "November 2, 2025",
         "categories": ["Extended"]
+    },
+    "16": {
+        "title": "Jane Street Shut the Box",
+        "fileName": "JaneStreetShutTheBox",
+        "extended": false,
+        "date": "December 1, 2025",
+        "categories": []
     }
 }

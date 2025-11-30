@@ -1,10 +1,11 @@
 import Latex from "react-latex-next";
 import Gif from "../Media/janestreet_baseball.gif";
+import ExternalLink from "../../MainComponents/ExternalLink";
 
 function JaneStreetBaseball() {
     return (<div>
         <p className="pb-4">
-            My solution to the <a className="tc underline hover:text-primary dark:hover:text-primary-dark" href="https://www.janestreet.com/puzzles/robot-baseball-index/">Jane Street Robot Baseball puzzle.</a> In my infinite wisdom I submitted the wrong number so I'm not listed on the official leaderboard, but my solution is still valid! I hope I won't make the same mistake again...
+            My solution to the <ExternalLink href="https://www.janestreet.com/puzzles/robot-baseball-index/">Jane Street Robot Baseball puzzle.</ExternalLink> In my infinite wisdom I submitted the wrong number so I'm not listed on the official leaderboard, but my solution is still valid! I hope I won't make the same mistake again...
         </p>
 
         <h2 className="text-3xl pt-4" id="rules">The Puzzle</h2>
@@ -272,7 +273,7 @@ function JaneStreetBaseball() {
         </ul>
 
         <p className="py-2">
-            The full code is available on <a className="tc underline hover:text-primary dark:hover:text-primary-dark" href="https://github.com/matthewjackswann/janestreet-puzzles#">my github.</a>
+            The full code is available on <ExternalLink href="https://github.com/matthewjackswann/janestreet-puzzles">my Github</ExternalLink>.
         </p>
 
     </div>);
