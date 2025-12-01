@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.756900ce.css",
-    "main.js": "/static/js/main.e5bf52aa.js",
+    "main.css": "/static/css/main.21a1244d.css",
+    "main.js": "/static/js/main.0fdc6de9.js",
     "static/js/415.0783abb3.chunk.js": "/static/js/415.0783abb3.chunk.js",
     "static/js/136.588169b2.chunk.js": "/static/js/136.588169b2.chunk.js",
     "static/js/178.a023d2c7.chunk.js": "/static/js/178.a023d2c7.chunk.js",
@@ -16,6 +16,7 @@
     "static/js/488.7985a04a.chunk.js": "/static/js/488.7985a04a.chunk.js",
     "static/media/report.pdf": "/static/media/report.f117a8780de1b8f55f0f.pdf",
     "static/media/poster.png": "/static/media/poster.1f821ed80af6abff458c.png",
+    "static/media/shut_the_box.gif": "/static/media/shut_the_box.e7303d4dada94f19d2f5.gif",
     "static/media/piano.mp4": "/static/media/piano.a98ac3ae0075c1555bc9.mp4",
     "static/media/mayo_poster.png": "/static/media/mayo_poster.97ff95a5aafbc3c89304.png",
     "static/media/example1unfixed.png": "/static/media/example1unfixed.e6ad51028df04dc6da2a.png",
@@ -144,11 +145,11 @@
     "static/media/linkedin.svg": "/static/media/linkedin.c6b860b809f83087c800ae63ccc93c6d.svg",
     "static/media/email.svg": "/static/media/email.0b76d4ac49b5ed4617dfac4482bfb4b2.svg",
     "index.html": "/index.html",
-    "main.756900ce.css.map": "/static/css/main.756900ce.css.map",
-    "main.e5bf52aa.js.map": "/static/js/main.e5bf52aa.js.map"
+    "main.21a1244d.css.map": "/static/css/main.21a1244d.css.map",
+    "main.0fdc6de9.js.map": "/static/js/main.0fdc6de9.js.map"
   },
   "entrypoints": [
-    "static/css/main.756900ce.css",
-    "static/js/main.e5bf52aa.js"
+    "static/css/main.21a1244d.css",
+    "static/js/main.0fdc6de9.js"
   ]
 }
